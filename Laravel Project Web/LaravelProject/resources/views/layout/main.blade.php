@@ -12,9 +12,9 @@
 
 @include('partials.headerUnregister')
 
-<main class="container mt-5">
+{{-- <main class="container mt-5">
     @yield('content')
-</main>
+</main> --}}
 
 @include('partials.footer')
 
