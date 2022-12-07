@@ -15,6 +15,10 @@ class CreateRegistersTable extends Migration
     {
         Schema::create('registers', function (Blueprint $table) {
             $table->id();
+            $table->string('username');
+            $table->string('email_address')->unique();
+            $table->string('password');
+            $table->string('confirm_password');
             $table->timestamps();
         });
     }
