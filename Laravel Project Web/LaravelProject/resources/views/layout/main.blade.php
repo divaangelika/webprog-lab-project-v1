@@ -10,7 +10,7 @@
 </head>
 <body>
 
-@include('partials.headerUnregister')
+    @include('partials.headerUnregister')
 
 {{-- <main class="container mt-5">
     @yield('content')
