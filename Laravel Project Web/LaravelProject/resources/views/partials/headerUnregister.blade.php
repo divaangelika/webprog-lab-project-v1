@@ -1,12 +1,12 @@
 <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="{{ route('pages.index') }}">Giant Book Supplier</a>
+        <a class="navbar-brand" href="{{ route('') }}">ShowFlix</a>
         <ul class="nav justify-content-end">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="{{ route('pages.index') }}">Sho</a>
+              <a class="nav-link active" aria-current="page" href="{{ route(' ') }}">Showflix</a>
             </li>
-            wFlix
+
             <li class="nav-item">
               <a class="nav-link" href="{{ route(' ') }}">Register</a>
             </li>
