@@ -17,8 +17,8 @@ Route::get('/', function () {
     return view('layout.main');
 });
 
-// Route::get('/footer', function () {
-//     return view('partials.footer');
-// });
+Route::get('/login', function () {
+    return view('login');
+});
 
 
