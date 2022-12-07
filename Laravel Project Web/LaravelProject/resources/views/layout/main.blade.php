@@ -16,7 +16,7 @@
     @yield('content')
 </main> --}}
 
-@include('partials.footer')
+@yield('testfooter')
 
 @include('partials.script')
 

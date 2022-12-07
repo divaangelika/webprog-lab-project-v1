@@ -4,11 +4,20 @@
         <a class="navbar-brand" href="">ShowFlix</a>
         <ul class="nav justify-content-end">
             <li class="nav-item">
-              <a class="nav-link" href="">Register</a>
+                <a class="nav-link" href="">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="">Login</a>
-              </li>
+                <a class="nav-link" href="">Movie</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="">Actor</a>
+            </li>
+            <button type="button"
+                class="btn btn-outline-primary">Register
+            </button>
+            <button type="button"
+                class="btn btn-outline-primary">Login
+            </button>
           </ul>
       </div>
     </nav>
