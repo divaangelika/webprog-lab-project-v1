@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 // asd
 //test1
+//test2
 
 Route::get('/', function () {
     return view('layout.main');
