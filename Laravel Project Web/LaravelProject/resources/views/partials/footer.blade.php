@@ -1,5 +1,6 @@
 @extends('layout.main')
 @section('testfooter')
+
 <footer>
     <div class="text-center">
         <h1 class="display-3">ShowFlix</h1>
@@ -29,4 +30,5 @@
         &copy; {{ date('Y') }} ShowFlix All Right Reserved
     </div>
 </footer>
+
 @endsection
