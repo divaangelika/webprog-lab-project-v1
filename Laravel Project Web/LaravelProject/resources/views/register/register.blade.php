@@ -2,7 +2,7 @@
 @section('register')
 {{-- <h1>test123</h1> --}}
 
-<form>
+<form method="POST" action={{ url('/register')}}>
     <div class="form-group">
       <label for="username">Username</label>
       <input type="username" class="form-control" id="exampleInputUsername" aria-describedby="usernameHelp" placeholder="Enter Username">

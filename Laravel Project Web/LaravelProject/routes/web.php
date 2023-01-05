@@ -21,13 +21,13 @@ Route::get('/', function () {
     return view('homepage.homepage');
 });
 
-Route::get('/register', function () {
-    return view('register.register');
-});
+# Route untuk Login
+Route::get('/login', [AuthController::class, 'loginPage']);
+Route::post('/login', [AuthController::class, 'loginMember']);
 
-Route::get('/login', function () {
-    return view('login.login');
-});
+# Route untuk Register
+Route::get('/register', [AuthController::class, 'registerPage']);
+Route::post('/register', [AuthController::class, 'registerMember']);
 
 
 
