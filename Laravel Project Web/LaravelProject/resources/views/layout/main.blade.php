@@ -7,17 +7,21 @@
   <title>Showflix</title>
 
   @include('partials.styles')
+  {{-- @yield('styles') --}}
 
 </head>
 <body>
+    <h1>test 123</h1>
 
-    @include('partials.headerUnregister')
+    {{-- @include('partials.headerUnregister') --}}
+    @yield('header_unregs')
     {{-- @include('partials.carousel') --}}
 
     {{-- @yield('testfooter') --}}
 
-    @include('partials.script')
-    @yield('testfooter')
+    {{-- @include('partials.script') --}}
+    {{-- @include('partials.footer') --}}
+    {{-- @yield('testfooter') --}}
 
 </body>
 </html>

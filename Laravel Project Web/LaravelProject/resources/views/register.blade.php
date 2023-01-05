@@ -6,11 +6,11 @@
   <meta name="description" content="">
   <title>register</title>
 
-  @include('partials.styles')
+  {{-- @include('partials.styles') --}}
 </head>
 <body>
 
-    @include('partials.headerUnregister')
+    {{-- @include('partials.headerUnregister') --}}
 
 {{-- <main class="container mt-5">
     @yield('content')
@@ -38,9 +38,9 @@
 
 
 
-@yield('testfooter')
+{{-- @yield('testfooter') --}}
 
-@include('partials.script')
+{{-- @include('partials.script') --}}
 
 </body>
 </html>
