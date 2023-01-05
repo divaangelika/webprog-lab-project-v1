@@ -10,11 +10,12 @@
 </head>
 <body>
 
-    @include('partials.headerUnregister')
+  @include('partials.headerUnregister')
 
 {{-- <main class="container mt-5">
     @yield('content')
 </main> --}}
+
 <form>
     <div class="form-group">
         <label for="exampleInputEmail1">Email address</label>
