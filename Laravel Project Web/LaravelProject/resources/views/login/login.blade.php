@@ -1,20 +1,9 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
-  <title>login</title>
+@extends('master.master')
+@section('login')
 
-  @include('partials.styles')
-</head>
-<body>
+  {{-- @include('partials.styles')
+  @include('partials.headerUnregister') --}}
 
-  @include('partials.headerUnregister')
-
-{{-- <main class="container mt-5">
-    @yield('content')
-</main> --}}
 
 <form method="POST" action={{ url('/login')}}>
     <div class="form-group">
@@ -33,9 +22,7 @@
     <button type="submit" class="btn btn-primary">Login</button>
   </form>
 
-@yield('testfooter')
 
 @include('partials.script')
 
-</body>
-</html>
+@endsection

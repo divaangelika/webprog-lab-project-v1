@@ -18,18 +18,14 @@ use Illuminate\Support\Facades\Route;
 //test2
 
 Route::get('/', function () {
-    // return view('partials.headerUnregister');
-    // return view('layout.main');
-    // return view('test');
-    // return 'test';
     return view('homepage.homepage');
-    // return view('unregister.unregister_homepage');
 });
 
 Route::get('/register', function () {
     return view('register.register');
 });
 
+<<<<<<< Updated upstream
 // Route::get('/login', function () {
 //     return view('login');
 //     // return ("test");
@@ -42,6 +38,11 @@ Route::post('/login', [AuthController::class, 'loginMember']);
 # Route untuk Register
 Route::get('/register', [AuthController::class, 'registerPage']);
 Route::post('/register', [AuthController::class, 'registerMember']);
+=======
+Route::get('/login', function () {
+    return view('login.login');
+});
+>>>>>>> Stashed changes
 
 
 
