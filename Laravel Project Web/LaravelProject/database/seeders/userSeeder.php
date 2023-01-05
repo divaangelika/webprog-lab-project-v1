@@ -33,8 +33,6 @@ class userSeeder extends Seeder
                 'phone_number' => '021123456',
                 'address' => 'jl. flaminggo no 17'
             ]
-
-
         ]);
     }
 }
