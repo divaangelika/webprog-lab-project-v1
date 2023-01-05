@@ -17,8 +17,9 @@ class AuthController extends Controller
 
     public function loginMember(Request $request)
     {
-        $email = $request->email;
-        $password = $request->password;
+        $email = $request->input('email');
+        $password = $request->input('password');
+
 
         if($request->remember){
             Cookie::queue('email_cookie', $email, 2);
@@ -29,6 +30,9 @@ class AuthController extends Controller
             'email' => $email,
             'password' => $password
         ];
+
+        //check isi
+        // dd($credentials);
 
         if (Auth::attempt($credentials, $request->remember)){
             Session::put('credentials_session', $credentials);
