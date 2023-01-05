@@ -30,7 +30,7 @@ class AuthController extends Controller
             'password' => $password
         ];
 
-        if (Auth::attempt($credentials, true)){
+        if (Auth::attempt($credentials, $request->remember)){
             Session::put('credentials_session', $credentials);
 
             if (Auth::user()->role == 'admin') {
@@ -41,9 +41,9 @@ class AuthController extends Controller
 
         }
 
-        return redirect('/log');
-
+        return redirect('/login')->withErrors(['Invalid email or password.']);
     }
+
 
     public function logout(){
         Auth::logout();
@@ -72,7 +72,7 @@ class AuthController extends Controller
 
         ]);
 
-        User::insert([
+        User::create([
 
             'email' => $email,
             "password" => bcrypt($password),
