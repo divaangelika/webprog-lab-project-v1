@@ -6,7 +6,7 @@
   <meta name="description" content="">
   <title>Showflix</title>
 
-  @include('partials.styles')
+  {{-- @include('partials.styles') --}}
   {{-- @yield('styles') --}}
 
 </head>
@@ -14,7 +14,7 @@
     <h1>test 123</h1>
 
     {{-- @include('partials.headerUnregister') --}}
-    @yield('header_unregs')
+    {{-- @yield('header_unregs') --}}
     {{-- @include('partials.carousel') --}}
 
     {{-- @yield('testfooter') --}}
