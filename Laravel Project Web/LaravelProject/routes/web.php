@@ -18,12 +18,17 @@ use Illuminate\Support\Facades\Route;
 //test2
 
 Route::get('/', function () {
-    return view('layout.main');
+    // return view('partials.headerUnregister');
+    // return view('layout.main');
+    // return view('test');
+    // return 'test';
+    return view('homepage.homepage');
+    // return view('unregister.unregister_homepage');
 });
 
-// Route::get('/register', function () {
-//     return view('register');
-// });
+Route::get('/register', function () {
+    return view('register.register');
+});
 
 // Route::get('/login', function () {
 //     return view('login');

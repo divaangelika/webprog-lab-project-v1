@@ -1,20 +1,7 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
-  <title>register</title>
+@extends('master.master')
+@section('register')
+{{-- <h1>test123</h1> --}}
 
-  {{-- @include('partials.styles') --}}
-</head>
-<body>
-
-    {{-- @include('partials.headerUnregister') --}}
-
-{{-- <main class="container mt-5">
-    @yield('content')
-</main> --}}
 <form>
     <div class="form-group">
       <label for="username">Username</label>
@@ -34,14 +21,4 @@
       </div>
     <button type="submit" class="btn btn-primary">Register</button>
   </form>
-
-
-
-
-{{-- @yield('testfooter') --}}
-
-{{-- @include('partials.script') --}}
-
-</body>
-</html>
-
+@endsection
