@@ -91,6 +91,9 @@ class AuthController extends Controller
             "password" => $password
         ];
 
+        //check isi
+        dd($credentials);
+
         // Login
         if (Auth::attempt($credentials, true)) {
 
