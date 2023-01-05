@@ -13,10 +13,12 @@
                 <a class="nav-link" href="">Actor</a>
             </li>
             <button type="button"
-                class="btn btn-outline-primary">Register
+                class="btn btn-outline-primary">
+                <a href="/register">Register</a>
             </button>
             <button type="button"
-                class="btn btn-outline-primary">Login
+                class="btn btn-outline-primary">
+                <a href="/login">Login</a>
             </button>
           </ul>
       </div>
