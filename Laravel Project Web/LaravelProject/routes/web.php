@@ -25,24 +25,9 @@ Route::get('/register', function () {
     return view('register.register');
 });
 
-// <<<<<<< Updated upstream
-// // Route::get('/login', function () {
-// //     return view('login');
-// //     // return ("test");
-// // });
-
-// # Route untuk Login
-// Route::get('/login', [AuthController::class, 'loginPage']);
-// Route::post('/login', [AuthController::class, 'loginMember']);
-
-// # Route untuk Register
-// Route::get('/register', [AuthController::class, 'registerPage']);
-// Route::post('/register', [AuthController::class, 'registerMember']);
-// =======
-// Route::get('/login', function () {
-//     return view('login.login');
-// });
-// >>>>>>> Stashed changes
+Route::get('/login', function () {
+    return view('login.login');
+});
 
 
 
