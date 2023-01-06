@@ -72,7 +72,7 @@ class AuthController extends Controller
             'username' => 'required|min:5|max:20',
             'email' => 'required|email|unique:users',
             'password' => 'required|min:5|max:20',
-            'conpassword' => 'required|min:5|max:20',
+            'conpassword' => 'required|same:password',
 
         ]);
 
