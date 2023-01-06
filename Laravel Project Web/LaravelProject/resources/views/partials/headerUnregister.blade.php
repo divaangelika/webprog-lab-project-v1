@@ -4,7 +4,7 @@
         <a class="navbar-brand" href="">ShowFlix</a>
         <ul class="nav justify-content-end">
             <li class="nav-item">
-                <a class="nav-link" href="">Home</a>
+                <a class="nav-link" href="/">Home</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="">Movie</a>
