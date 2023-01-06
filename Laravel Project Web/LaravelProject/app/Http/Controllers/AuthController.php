@@ -61,38 +61,35 @@ class AuthController extends Controller
 
     public function registerMember(Request $request)
     {
+        $username = $request->username;
         $email = $request->email;
         $password = $request->password;
-        $username = $request->username;
-        $phone_number = $request->phone_number;
-        $address = $request->address;
+        $conpassword = $request->conpassword;
+
+
 
         $this->validate($request, [
             'username' => 'required|min:5|max:20',
             'email' => 'required|email|unique:users',
             'password' => 'required|min:5|max:20',
-            'phone_number' => 'required|min:10|max:13',
-            'address' => 'required|min:5'
+            'conpassword' => 'required|min:5|max:20',
 
         ]);
 
         User::create([
-
+            'username' => $username,
             'email' => $email,
             "password" => bcrypt($password),
-            'username' => $username,
-            'phone_number' => $phone_number,
-            'address' => $address
+            "conpassword" => bcrypt($conpassword)
         ]);
 
         $credentials = [
-
             "email" => $email,
             "password" => $password
         ];
 
         //check isi
-        dd($credentials);
+        // dd($credentials);
 
         // Login
         if (Auth::attempt($credentials, true)) {

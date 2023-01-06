@@ -7,16 +7,20 @@
             <form method="POST" action={{ url('/register')}}>
                 @csrf
                 <div class="form-group">
-                <label for="username">Username</label>
-                <input type="username" class="form-control" id="username" name="username" aria-describedby="usernameHelp" placeholder="Enter Username">
+                    <label for="username">Username</label>
+                    <input type="username" class="form-control" id="username" name="username" aria-describedby="usernameHelp" placeholder="Enter Username">
                 </div>
                 <div class="form-group">
                     <label for="email">Email address</label>
                     <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Enter email">
                 </div>
                 <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+                </div>
+                <div class="form-group">
+                    <label for="conpassword">Password</label>
+                    <input type="password" class="form-control" id="conpassword" name="conpassword" placeholder="Password">
                 </div>
                 <button type="submit" class="btn btn-primary">Register</button>
             </form>

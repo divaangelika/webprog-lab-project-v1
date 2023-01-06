@@ -21,8 +21,6 @@ class UserSeeder extends Seeder
                 'email' => 'admin@gmail.com',
                 'password' => bcrypt('admin'),
                 'username' => 'admin1',
-                'phone_number' => '021123457',
-                'address' => 'jl. badak no 17'
             ],
 
             [
@@ -30,8 +28,6 @@ class UserSeeder extends Seeder
                 'email' => 'admin1@gmail.com',
                 'password' => bcrypt('admin123'),
                 'username' => 'admin1',
-                'phone_number' => '021123457',
-                'address' => 'jl. badak no 17'
             ],
 
             [
@@ -39,8 +35,6 @@ class UserSeeder extends Seeder
                 'email' => 'sarah@gmail.com',
                 'password' => bcrypt('member123'),
                 'username' => 'sarah',
-                'phone_number' => '021123456',
-                'address' => 'jl. flaminggo no 17'
             ]
         ]);
     }
