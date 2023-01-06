@@ -14,7 +14,7 @@
 
     {{-- <h1>test 123</h1> --}}
 
-    <header>
+    {{-- <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
           <div class="container-fluid">
             <a class="navbar-brand" href="">ShowFlix</a>
@@ -40,7 +40,7 @@
               </ul>
           </div>
         </nav>
-      </header>
+      </header> --}}
 
       @yield('slider')
 
