@@ -63,6 +63,7 @@ class AuthController extends Controller
         $conpassword = $request->conpassword;
 
 
+        Auth::user();
 
         $this->validate($request, [
             'username' => 'required|min:5|max:20',
@@ -91,6 +92,8 @@ class AuthController extends Controller
         // Login
         if (Auth::attempt($credentials, true)) {
 
+            $user = User::all()->first();
+            $user->role;
             $request->session()->put('credentials_session', $credentials);
             return redirect()->home();
         }
