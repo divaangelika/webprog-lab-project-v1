@@ -36,4 +36,10 @@
   </div>
 
   <h2>Popular</h2>
+
+  @foreach ($hp as $hp)
+    <img src="{{$hp->imgThumbnail}}" alt="">
+  @endforeach
+  {{-- <h2>test</h2> --}}
+
 @endsection

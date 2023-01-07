@@ -17,14 +17,14 @@ class MovieSeeder extends Seeder
         collect([
             [
                 'id'=>'1',
-                'title'=>'test',
-                'description'=>'asd',
-                'genre'=>'asd',
-                'actors'=>'ads',
-                'director'=>'ads',
-                'releaseDate'=>'2020-12-12',
-                'imgThumbnail'=>'ads',
-                'imgBackground'=>'ads'
+                'title'=>'Mission: Impossible - Fallout',
+                'description'=>'Ethan Hunt and the IMF team join forces with CIA assassin August Walker to prevent a disaster of epic proportions.',
+                'genre'=>'Action/Thriller',
+                'actors'=>'Tom Cruise, Rebecca Ferguson, Simon Pegg',
+                'director'=>'Christopher McQuarrie',
+                'releaseDate'=>'2018-7-25',
+                'imgThumbnail'=>'https://upload.wikimedia.org/wikipedia/en/f/ff/MI_%E2%80%93_Fallout.jpg',
+                'imgBackground'=>'https://footeandfriendsonfilm.com/wp-content/uploads/2018/07/Mission-Impossible-Fallout-Poster-5K.jpg'
                 ]
         ])->each(function ($movie)
         {

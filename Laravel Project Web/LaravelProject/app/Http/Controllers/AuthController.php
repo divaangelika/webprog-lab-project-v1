@@ -37,11 +37,13 @@ class AuthController extends Controller
         if (Auth::attempt($credentials, $request->remember)){
             Session::put('credentials_session', $credentials);
 
-            if (Auth::user()->role == 'admin') {
-                return redirect('/homeAdmin');
-            }else{
-                return redirect('/homeMember');
-            }
+            return redirect()->home();
+
+            // if (Auth::user()->role == 'admin') {
+            //     return redirect('/homeAdmin');
+            // }else{
+            //     return redirect('/homeMember');
+            // }
 
         }
 
