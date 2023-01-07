@@ -18,6 +18,9 @@
             <li class="nav-item">
                 <a class="nav-link" href="">Edit Movie</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="">Log Out</a>
+            </li>
           </ul>
       </div>
     </nav>
