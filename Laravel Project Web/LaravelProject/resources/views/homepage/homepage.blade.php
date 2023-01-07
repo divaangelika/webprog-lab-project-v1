@@ -15,8 +15,8 @@
         <div class="carousel-item @if ($i == 0) active @endif" data-bs-interval="10000">
             <img src="{{$caro[$i]->imgBackground}}" class="d-block w-100" alt="..." width="650" height="650">
             <div class="carousel-caption d-none d-md-block">
-                <h5>First slide label</h5>
-                <p>Some representative placeholder content for the first slide.</p>
+                <h5>{{$caro[$i]->title}}</h5>
+                <p>{{$caro[$i]->description}}</p>
             </div>
         </div>
         @endfor

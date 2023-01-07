@@ -28,14 +28,14 @@ class MovieSeeder extends Seeder
             ],
             [
                 'id'=>'2',
-                'title'=>'Wednesday',
-                'description'=>'Wednesday Addams, a high-school student, finds her brother Pugsley tied up in a locker. She sees a psychic vision of his bullies whom she attempts to kill, resulting in her expulsion.',
-                'genre'=>'Fantasy',
-                'actors'=>'Jenna Ortega, Christina Ricci, Catherine Zeta-Jones, Luis Guzmán',
-                'director'=>'Charles Addams',
-                'releaseDate'=>'2022-8-23',
-                'imgThumbnail'=>'https://www.picclickimg.com/tcEAAOSw9rVjql7t/2022-Wednesday-Movie-Poster-Jenna-Ortega-The-Addams.webp',
-                'imgBackground'=>'https://static1.moviewebimages.com/wordpress/wp-content/uploads/2022/09/wednesday-netflix-poster.jpeg'
+                'title'=>'Charlie\'s Angels',
+                'description'=>'A team of female private agents, popularly known as Charlies Angels, are tasked by their mysterious boss to expose an international conspiracy to weaponise an energy conservation device.',
+                'genre'=>'Actiom, Comedy',
+                'actors'=>'Elizabeth Banks, Kristen Stewart, Ella Balinska Naomi Scott',
+                'director'=>'Elizabeth Banks',
+                'releaseDate'=>'2019-8-13',
+                'imgThumbnail'=>'https://upload.wikimedia.org/wikipedia/en/2/2a/Charlie%27s_Angels_%28Official_2019_Film_Poster%29.png',
+                'imgBackground'=>'https://mmc.tirto.id/image/2019/11/15/film-charlies-angels--1_ratio-16x9.jpg'
             ],
             [
                 'id'=>'3',
@@ -45,7 +45,7 @@ class MovieSeeder extends Seeder
                 'actors'=>'Zoe Saldaña, Sam Worthington, Sigourney Weaver, Michelle Rodriguez',
                 'director'=>'James Cameron',
                 'releaseDate'=>'2022-12-18',
-                'imgThumbnail'=>'https://m.media-amazon.com/images/M/MV5BYjhiNjBlODctY2ZiOC00YjVlLWFlNzAtNTVhNzM1YjI1NzMxXkEyXkFqcGdeQXVyMjQxNTE1MDA@._V1_.jpg',
+                'imgThumbnail'=>'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSmGggtpJ4TX3aN3PUaVWUgNODHespRPvKYAyhGUAZSqSOmPiEm',
                 'imgBackground'=>'https://w0.peakpx.com/wallpaper/965/851/HD-wallpaper-avatar-2-2018-poster-fantasy-movie-avatar-2-navi-blue.jpg'
             ],
         ])->each(function ($movie)
