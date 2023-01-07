@@ -45,7 +45,7 @@ class MovieSeeder extends Seeder
                 'actors'=>'Zoe Saldaña, Sam Worthington, Sigourney Weaver, Michelle Rodriguez',
                 'director'=>'James Cameron',
                 'releaseDate'=>'2022-12-18',
-                'imgThumbnail'=>'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSmGggtpJ4TX3aN3PUaVWUgNODHespRPvKYAyhGUAZSqSOmPiEm',
+                'imgThumbnail'=>'https://upload.wikimedia.org/wikipedia/en/5/54/Avatar_The_Way_of_Water_poster.jpg',
                 'imgBackground'=>'https://w0.peakpx.com/wallpaper/965/851/HD-wallpaper-avatar-2-2018-poster-fantasy-movie-avatar-2-navi-blue.jpg'
             ],
         ])->each(function ($movie)

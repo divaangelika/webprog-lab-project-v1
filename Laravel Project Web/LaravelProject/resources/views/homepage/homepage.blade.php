@@ -36,8 +36,7 @@
   <h2>Popular</h2>
 
   @foreach ($hp as $hp)
-    <img src="{{$hp->imgThumbnail}}" alt="">
+    <img src="{{$hp->imgThumbnail}}" alt="" width="295" height="450">
   @endforeach
-  {{-- <h2>test</h2> --}}
 
 @endsection
