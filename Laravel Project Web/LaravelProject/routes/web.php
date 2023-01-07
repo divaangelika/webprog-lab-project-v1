@@ -16,7 +16,7 @@ Route::get('/register', [AuthController::class, 'registerPage']);
 Route::post('/register', [AuthController::class, 'registerMember']);
 
 # Route Untuk Home
-Route::get("/", [MovieController::class, 'loadMovie'])->name('home');
+Route::get("/home", [MovieController::class, 'loadMovie'])->name('home');
 
 // Route::get('/login', '\App\Http\Controllers\AuthController@loginPage');
 // Route::post('/login', '\App\Http\Controllers\AuthController@loginMember');
