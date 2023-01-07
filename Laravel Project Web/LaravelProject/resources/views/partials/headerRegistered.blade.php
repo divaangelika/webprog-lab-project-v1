@@ -16,7 +16,7 @@
                 <a class="nav-link" href="">Watch List</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="">Log Out</a>
+                <a class="nav-link" href="{{route('logout')}}">Log Out</a>
             </li>
           </ul>
       </div>

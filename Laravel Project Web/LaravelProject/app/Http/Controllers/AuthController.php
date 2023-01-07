@@ -39,12 +39,6 @@ class AuthController extends Controller
 
             return redirect()->home();
 
-            // if (Auth::user()->role == 'admin') {
-            //     return redirect('/homeAdmin');
-            // }else{
-            //     return redirect('/homeMember');
-            // }
-
         }
 
         return redirect('/login')->withErrors(['Invalid email or password.']);
@@ -81,6 +75,7 @@ class AuthController extends Controller
         User::create([
             'username' => $username,
             'email' => $email,
+            'role' => 'user',
             "password" => bcrypt($password),
             "conpassword" => bcrypt($conpassword)
         ]);
@@ -97,9 +92,11 @@ class AuthController extends Controller
         if (Auth::attempt($credentials, true)) {
 
             $request->session()->put('credentials_session', $credentials);
-            return redirect("/homeMember");
+            return redirect()->home();
         }
 
         return "fail";
     }
+
+
 }
