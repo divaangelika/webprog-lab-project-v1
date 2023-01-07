@@ -1,5 +1,13 @@
 @extends('master.master')
-@include('partials.headerUnregister')
+
+@if(!Auth::check())
+    @include('partials.headerUnregister')
+@elseif(Auth::user()->role == 'admin')
+    @include('partials.headerAdmin')
+@else
+    @include('partials.headerRegistered')
+@endif
+
 @section('slider')
 <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
