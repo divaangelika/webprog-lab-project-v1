@@ -9,7 +9,7 @@ Route::get('/', [HomepageController::class, 'load_homepage'])->name('home');
 
 # Route untuk Login
 Route::get('/login', [AuthController::class, 'loginPage']);
-Route::post('/login', [AuthController::class, 'loginMember']);
+Route::post('/login', [AuthController::class, 'loginMember'])->name('login-post');
 
 # Route untuk Register
 Route::get('/register', [AuthController::class, 'registerPage']);
