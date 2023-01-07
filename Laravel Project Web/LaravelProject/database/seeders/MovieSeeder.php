@@ -48,6 +48,39 @@ class MovieSeeder extends Seeder
                 'imgThumbnail'=>'https://upload.wikimedia.org/wikipedia/en/5/54/Avatar_The_Way_of_Water_poster.jpg',
                 'imgBackground'=>'https://w0.peakpx.com/wallpaper/965/851/HD-wallpaper-avatar-2-2018-poster-fantasy-movie-avatar-2-navi-blue.jpg'
             ],
+            [
+                'id'=>'4',
+                'title'=>'Avatar: The Way of Water',
+                'description'=>'Jake Sully lives with his newfound family formed on the extrasolar moon Pandora. Once a familiar threat returns to finish what was previously started, Jake must work with Neytiri and the army of the Navi race to protect their home',
+                'genre'=>'Adventure',
+                'actors'=>'Zoe Saldaña, Sam Worthington, Sigourney Weaver, Michelle Rodriguez',
+                'director'=>'James Cameron',
+                'releaseDate'=>'2022-12-18',
+                'imgThumbnail'=>'https://upload.wikimedia.org/wikipedia/en/5/54/Avatar_The_Way_of_Water_poster.jpg',
+                'imgBackground'=>'https://w0.peakpx.com/wallpaper/965/851/HD-wallpaper-avatar-2-2018-poster-fantasy-movie-avatar-2-navi-blue.jpg'
+            ],
+            [
+                'id'=>'5',
+                'title'=>'Avatar: The Way of Water',
+                'description'=>'Jake Sully lives with his newfound family formed on the extrasolar moon Pandora. Once a familiar threat returns to finish what was previously started, Jake must work with Neytiri and the army of the Navi race to protect their home',
+                'genre'=>'Adventure',
+                'actors'=>'Zoe Saldaña, Sam Worthington, Sigourney Weaver, Michelle Rodriguez',
+                'director'=>'James Cameron',
+                'releaseDate'=>'2022-12-18',
+                'imgThumbnail'=>'https://upload.wikimedia.org/wikipedia/en/5/54/Avatar_The_Way_of_Water_poster.jpg',
+                'imgBackground'=>'https://w0.peakpx.com/wallpaper/965/851/HD-wallpaper-avatar-2-2018-poster-fantasy-movie-avatar-2-navi-blue.jpg'
+            ],
+            [
+                'id'=>'6',
+                'title'=>'Avatar: The Way of Water',
+                'description'=>'Jake Sully lives with his newfound family formed on the extrasolar moon Pandora. Once a familiar threat returns to finish what was previously started, Jake must work with Neytiri and the army of the Navi race to protect their home',
+                'genre'=>'Adventure',
+                'actors'=>'Zoe Saldaña, Sam Worthington, Sigourney Weaver, Michelle Rodriguez',
+                'director'=>'James Cameron',
+                'releaseDate'=>'2022-12-18',
+                'imgThumbnail'=>'https://upload.wikimedia.org/wikipedia/en/5/54/Avatar_The_Way_of_Water_poster.jpg',
+                'imgBackground'=>'https://w0.peakpx.com/wallpaper/965/851/HD-wallpaper-avatar-2-2018-poster-fantasy-movie-avatar-2-navi-blue.jpg'
+            ],
         ])->each(function ($movie)
         {
             DB::table('movies')->insert($movie);
