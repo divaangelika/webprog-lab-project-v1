@@ -17,6 +17,10 @@ Route::post('/register', [AuthController::class, 'registerMember']);
 
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
+// admin
+// Route::get('/addMovie', [ProductController::class, 'addMoviePage'])->name('add-movie');
+// Route::put('/addMovie', [ProductController::class, 'addProduct'])->name('add-movie-database');
+
 
 // Route::get('/login', '\App\Http\Controllers\AuthController@loginPage');
 // Route::post('/login', '\App\Http\Controllers\AuthController@loginMember');
