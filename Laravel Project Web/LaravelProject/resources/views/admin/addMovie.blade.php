@@ -17,7 +17,7 @@
 
                 <div class="form-group">
                     <label for="title">Title</label>
-                    <input type="title" class="form-control" id="title" name="title" aria-describedby="title" placeholder="Enter title">
+                    <input type="text" class="form-control" id="title" name="title" aria-describedby="title" placeholder="Enter title">
                 </div>
                 <div class="form-group">
                     <label for="description">Description</label>
@@ -25,19 +25,27 @@
                 </div>
                 <div class="form-group">
                     <label for="genre">Genre</label>
-                    <input type="genre" class="form-control" id="genre" name="genre" aria-describedby="genre" placeholder="Enter genre">
+                    <input type="form-select" class="form-control" id="genre" name="genre" aria-describedby="genre" placeholder="Enter genre">
                 </div>
                 <div class="form-group">
                     <label for="actor">Actor</label>
-                    <input type="actor" class="form-control" id="actor" name="actor" aria-describedby="actor" placeholder="Enter actor">
+                    <input type="text" class="form-control" id="actor" name="actor" aria-describedby="actor" placeholder="Enter actor">
                 </div>
                 <div class="form-group">
                     <label for="director">Director</label>
-                    <input type="director" class="form-control" id="director" name="director" aria-describedby="director" placeholder="Enter director">
+                    <input type="text" class="form-control" id="director" name="director" aria-describedby="director" placeholder="Enter director">
+                </div>
+                <div class="form-group">
+                    <label for="director">Image Thumbnail</label>
+                    <input type="file" class="form-control" id="imgThumbnail" name="imgThumbnail" aria-describedby="director" placeholder="Enter image">
+                </div>
+                <div class="form-group">
+                    <label for="director">Image Background</label>
+                    <input type="file" class="form-control" id="imgBackground" name="imgBackground" aria-describedby="director" placeholder="Enter image">
                 </div>
 
 
-                <button type="submit" class="btn btn-primary">Create</button>
+                <button type="submit" class="btn btn-primary">Add</button>
             </form>
         </div>
     </div>
