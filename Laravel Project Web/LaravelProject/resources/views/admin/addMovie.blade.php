@@ -36,11 +36,11 @@
                     <input type="text" class="form-control" id="director" name="director" aria-describedby="director" placeholder="Enter director">
                 </div>
                 <div class="form-group">
-                    <label for="director">Image Thumbnail</label>
+                    <label for="filethumb">Image Thumbnail</label>
                     <input type="file" class="form-control" id="imgThumbnail" name="imgThumbnail" aria-describedby="director" placeholder="Enter image">
                 </div>
                 <div class="form-group">
-                    <label for="director">Image Background</label>
+                    <label for="filebackground">Image Background</label>
                     <input type="file" class="form-control" id="imgBackground" name="imgBackground" aria-describedby="director" placeholder="Enter image">
                 </div>
 
