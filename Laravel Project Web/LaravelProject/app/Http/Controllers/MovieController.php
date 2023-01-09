@@ -45,11 +45,11 @@ class MovieController extends Controller
 
         $image = $request->file('imgThumbnail');
         $imageThumbnail = $image->hashName();
-        $image->storeAs('/public/pictures/product', $imageThumbnail);
+        $image->storeAs('/public/pictures/imgThumbnail', $imageThumbnail);
 
         $image = $request->file('imgBackground');
         $imageBackground = $image->hashName();
-        $image->storeAs('/public/pictures/product', $imageBackground);
+        $image->storeAs('/public/pictures/imgBackground', $imageBackground);
 
         Movie::insert([
             'name' => $request->nameProduct,
