@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Genre;
 use App\Models\Movie;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -26,9 +27,10 @@ class MovieController extends Controller
         }
     }
 
-    public function addMoviePage()
+    public function addMoviePage(Request $request)
     {
-        return view('admin.addMovie');
+        $genres = Genre::all();
+        return view('admin.addMovie', ['genres' => $genres]);
     }
 
     public function addMovie(Request $request)

@@ -19,7 +19,7 @@ Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
 // admin
 Route::get('/addMovie', [MovieController::class, 'addMoviePage'])->name('add-movie');
-// Route::put('/addMovie', [ProductController::class, 'addProduct'])->name('add-movie-database');
+Route::put('/addMovie', [MovieController::class, 'addMovie'])->name('add-movie-database');
 
 
 // Route::get('/login', '\App\Http\Controllers\AuthController@loginPage');

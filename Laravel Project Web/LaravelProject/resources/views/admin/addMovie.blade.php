@@ -25,8 +25,19 @@
                     <input type="description" class="form-control" id="description" name="title" aria-describedby="description" placeholder="Enter description">
                 </div>
                 <div class="form-group">
-                    <label for="genre">Genre</label>
-                    <input type="form-select" class="form-control" id="genre" name="genre" aria-describedby="genre" placeholder="Enter genre">
+                    <label for="genre" class="form-label">Genre</label>
+                            <br/>
+
+                            <select
+                                name="genre"
+                                id="genre"
+                                class="form-select"
+                            >
+                                <option selected value="">Select a Category</option>
+                                @foreach($genres as $genre)
+                                    <option value="{{$genre->id}}">{{$genre->name}}</option>
+                                @endforeach
+                            </select>
                 </div>
                 <div class="form-group">
                     <label for="actor">Actor</label>
