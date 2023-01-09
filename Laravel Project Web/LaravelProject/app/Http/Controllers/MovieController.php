@@ -31,7 +31,7 @@ class MovieController extends Controller
         return view('admin.addMovie');
     }
 
-    public function addProduct(Request $request)
+    public function addMovie(Request $request)
     {
         $request->validate([
             'title' => 'required',
