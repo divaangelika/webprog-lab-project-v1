@@ -26,9 +26,9 @@ class MovieController extends Controller
         }
     }
 
-    public function addProductPage()
+    public function addMoviePage()
     {
-        return view('addMovie');
+        return view('admin.addMovie');
     }
 
     public function addProduct(Request $request)

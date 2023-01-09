@@ -13,7 +13,7 @@
                 <a class="nav-link" href="">Actor</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="">Add Movie</a>
+                <a class="nav-link" href="/addMovie">Add Movie</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{{route('logout')}}">Log Out</a>

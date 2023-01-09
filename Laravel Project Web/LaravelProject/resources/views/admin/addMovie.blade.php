@@ -3,7 +3,7 @@
 <div class="mt-5" style="justify-content:center; align-items:center; display:flex;">
     <div class="card w-50" style="background-color:rgb(175, 148, 217)">
         <div class="card-body">
-            <form method="POST" action={{ url('/add')}}>
+            <form method="POST" action={{ url('/addMovie')}}>
                 @csrf
                 @if ($errors->any())
                 <div class="alert alert-danger">
