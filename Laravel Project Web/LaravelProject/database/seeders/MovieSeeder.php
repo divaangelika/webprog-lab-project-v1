@@ -14,12 +14,13 @@ class MovieSeeder extends Seeder
      */
     public function run()
     {
-        collect([
+        DB::table('movies')->insert([
+
             [
-                'id'=>'1',
+                // 'id'=>'1',
                 'title'=>'Mission: Impossible - Fallout',
                 'description'=>'Ethan Hunt and the IMF team join forces with CIA assassin August Walker to prevent a disaster of epic proportions.',
-                'genre'=>'Action/Thriller',
+                'genre_id'=>'1',
                 'actors'=>'Tom Cruise, Rebecca Ferguson, Simon Pegg',
                 'director'=>'Christopher McQuarrie',
                 'releaseDate'=>'2018-7-25',
@@ -27,10 +28,10 @@ class MovieSeeder extends Seeder
                 'imgBackground'=>'https://ic.c4assets.com/brands/mission-impossible-fallout/c7be71e7-9968-4b38-8f01-c64a70bf9480.jpg?interpolation=progressive-bicubic&output-format=jpeg&output-quality=90{&resize}'
             ],
             [
-                'id'=>'2',
+                // 'id'=>'2',
                 'title'=>'Charlie\'s Angels',
                 'description'=>'A team of female private agents, popularly known as Charlies Angels, are tasked by their mysterious boss to expose an international conspiracy to weaponise an energy conservation device.',
-                'genre'=>'Actiom, Comedy',
+                'genre_id'=>'2',
                 'actors'=>'Elizabeth Banks, Kristen Stewart, Ella Balinska Naomi Scott',
                 'director'=>'Elizabeth Banks',
                 'releaseDate'=>'2019-8-13',
@@ -38,10 +39,10 @@ class MovieSeeder extends Seeder
                 'imgBackground'=>'https://mmc.tirto.id/image/2019/11/15/film-charlies-angels--1_ratio-16x9.jpg'
             ],
             [
-                'id'=>'3',
+                // 'id'=>'3',
                 'title'=>'Avatar: The Way of Water',
                 'description'=>'Jake Sully lives with his newfound family formed on the extrasolar moon Pandora. Once a familiar threat returns to finish what was previously started, Jake must work with Neytiri and the army of the Navi race to protect their home',
-                'genre'=>'Adventure',
+                'genre_id'=>'3',
                 'actors'=>'Zoe Saldaña, Sam Worthington, Sigourney Weaver, Michelle Rodriguez',
                 'director'=>'James Cameron',
                 'releaseDate'=>'2022-12-18',
@@ -49,10 +50,10 @@ class MovieSeeder extends Seeder
                 'imgBackground'=>'https://w0.peakpx.com/wallpaper/965/851/HD-wallpaper-avatar-2-2018-poster-fantasy-movie-avatar-2-navi-blue.jpg'
             ],
             [
-                'id'=>'4',
+                // 'id'=>'4',
                 'title'=>'Avatar: The Way of Water',
                 'description'=>'Jake Sully lives with his newfound family formed on the extrasolar moon Pandora. Once a familiar threat returns to finish what was previously started, Jake must work with Neytiri and the army of the Navi race to protect their home',
-                'genre'=>'Adventure',
+                'genre_id'=>'4',
                 'actors'=>'Zoe Saldaña, Sam Worthington, Sigourney Weaver, Michelle Rodriguez',
                 'director'=>'James Cameron',
                 'releaseDate'=>'2022-12-18',
@@ -60,10 +61,10 @@ class MovieSeeder extends Seeder
                 'imgBackground'=>'https://w0.peakpx.com/wallpaper/965/851/HD-wallpaper-avatar-2-2018-poster-fantasy-movie-avatar-2-navi-blue.jpg'
             ],
             [
-                'id'=>'5',
+                // 'id'=>'5',
                 'title'=>'Avatar: The Way of Water',
                 'description'=>'Jake Sully lives with his newfound family formed on the extrasolar moon Pandora. Once a familiar threat returns to finish what was previously started, Jake must work with Neytiri and the army of the Navi race to protect their home',
-                'genre'=>'Adventure',
+                'genre_id'=>'5',
                 'actors'=>'Zoe Saldaña, Sam Worthington, Sigourney Weaver, Michelle Rodriguez',
                 'director'=>'James Cameron',
                 'releaseDate'=>'2022-12-18',
@@ -71,19 +72,17 @@ class MovieSeeder extends Seeder
                 'imgBackground'=>'https://w0.peakpx.com/wallpaper/965/851/HD-wallpaper-avatar-2-2018-poster-fantasy-movie-avatar-2-navi-blue.jpg'
             ],
             [
-                'id'=>'6',
+                // 'id'=>'6',
                 'title'=>'Avatar: The Way of Water',
                 'description'=>'Jake Sully lives with his newfound family formed on the extrasolar moon Pandora. Once a familiar threat returns to finish what was previously started, Jake must work with Neytiri and the army of the Navi race to protect their home',
-                'genre'=>'Adventure',
+                'genre_id'=>'6',
                 'actors'=>'Zoe Saldaña, Sam Worthington, Sigourney Weaver, Michelle Rodriguez',
                 'director'=>'James Cameron',
                 'releaseDate'=>'2022-12-18',
                 'imgThumbnail'=>'https://upload.wikimedia.org/wikipedia/en/5/54/Avatar_The_Way_of_Water_poster.jpg',
                 'imgBackground'=>'https://w0.peakpx.com/wallpaper/965/851/HD-wallpaper-avatar-2-2018-poster-fantasy-movie-avatar-2-navi-blue.jpg'
-            ],
-        ])->each(function ($movie)
-        {
-            DB::table('movies')->insert($movie);
-        });
+            ]
+        ]);
     }
 }
+
