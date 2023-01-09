@@ -17,7 +17,7 @@ class CreateMoviesTable extends Migration
             $table->id();
             $table->string('title');
             $table->string('description');
-            $table->string('genre');
+            $table->foreignId('genre_id')->constrained();
             $table->string('actors');
             $table->string('director');
             $table->date('releaseDate');

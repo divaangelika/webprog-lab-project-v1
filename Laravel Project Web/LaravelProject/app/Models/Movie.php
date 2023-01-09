@@ -7,7 +7,18 @@ use Illuminate\Database\Eloquent\Model;
 
 class Movie extends Model
 {
-    use HasFactory;
+    protected $fillable = [
+        'title',
+        'description',
+        'genre_id',
+        'director',
+        'releaseDate',
+        'imgThumbnail',
+        'imgBackground'
+    ];
 
-    protected $primaryKey = 'id';
+    public function category()
+    {
+        return $this->belongsTo(Genre::class);
+    }
 }
