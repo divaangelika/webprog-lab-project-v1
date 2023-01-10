@@ -41,7 +41,7 @@
 
 <div id="carouselExampleControls" class="carousel carousel-dark slide" data-bs-ride="carousel">
     <div class="carousel-inner">
-        @for($i = 0; $i < count($caro); $i++)
+        @for($i = 0; $i < count($hp); $i++)
         <div class="carousel-item @if ($i == 0) active @endif">
             <div class="card-wrapper container-sm d-flex  justify-content-around">
                 <div class="card  " style="width: 18rem;">
@@ -64,6 +64,8 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+<h2>Show</h2>
 
 
 @endsection
