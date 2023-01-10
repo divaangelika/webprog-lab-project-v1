@@ -14,13 +14,12 @@ class Movie extends Model
         'director',
         'releaseDate',
         'imgThumbnail',
-        'imgBackground'
+        'imgBgenre_idackground'
     ];
 
     public function movie()
     {
         return $this->belongsTo(Genre::class);
         return $this->belongsTo(Actor::class);
-
     }
 }
