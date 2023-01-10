@@ -12,4 +12,12 @@ class MovieActor extends Model
     protected $fillable = [
         'name'
     ];
+
+    public function movie(){
+        return $this->belongsTo(Movie::class);
+    }
+    public function actor(){
+        return $this->belongsTo(Actor::class);
+    }
+
 }
