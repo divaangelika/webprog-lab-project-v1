@@ -14,7 +14,7 @@ class Movie extends Model
         'director',
         'releaseDate',
         'imgThumbnail',
-        'imgBgenre_idackground'
+        'imgBackground'
     ];
 
     public function movie()
