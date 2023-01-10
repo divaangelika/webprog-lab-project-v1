@@ -7,5 +7,18 @@ use Illuminate\Database\Eloquent\Model;
 
 class Actor extends Model
 {
-    use HasFactory;
+    protected $fillable = [
+        'name',
+        'gender',
+        'biography',
+        'dobActor',
+        'pobActor',
+        'imgActor',
+        'popularity'
+    ];
+
+    public function category()
+    {
+        return $this->belongsTo(Genre::class);
+    }
 }
