@@ -75,7 +75,7 @@ class MovieSeeder extends Seeder
                 // 'id'=>'6',
                 'title'=>'Avatar: The Way of Water',
                 'description'=>'Jake Sully lives with his newfound family formed on the extrasolar moon Pandora. Once a familiar threat returns to finish what was previously started, Jake must work with Neytiri and the army of the Navi race to protect their home',
-                'genre_id'=>'6',
+                'genre_id'=>'2',
                 'actors'=>'Zoe Saldaña, Sam Worthington, Sigourney Weaver, Michelle Rodriguez',
                 'director'=>'James Cameron',
                 'releaseDate'=>'2022-12-18',
