@@ -16,6 +16,6 @@ class MovieGenre extends Model
         'genre_id'
     ];
 
-    // public function
+    public function
 
 }
