@@ -53,6 +53,8 @@ class MovieController extends Controller
         $imageBackground = $image->hashName();
         $image->storeAs('/public/pictures/imgBackground', $imageBackground);
 
+        // dd($request->all());
+
         Movie::insert([
             'name' => $request->nameProduct,
             'category_id' => $request->categoryProduct,

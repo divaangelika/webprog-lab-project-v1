@@ -33,7 +33,7 @@
                                 id="genre"
                                 class="form-select"
                             >
-                                <option selected value="">Select a Category</option>
+                                <option selected value="">Select a Genre</option>
                                 @foreach($genres as $genre)
                                     <option value="{{$genre->id}}">{{$genre->name}}</option>
                                 @endforeach
