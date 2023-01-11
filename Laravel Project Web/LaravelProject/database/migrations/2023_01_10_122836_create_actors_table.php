@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateActorsTable extends Migration
+class Actor extends Migration
 {
     /**
      * Run the migrations.
@@ -21,7 +21,6 @@ class CreateActorsTable extends Migration
             $table->date('dobActor');
             $table->date('pobActor');
             $table->string('imgActor');
-            $table->string('imgBackground');
             $table->float('popularity');
 
             // $table->rememberToken();
@@ -37,4 +36,4 @@ class CreateActorsTable extends Migration
     {
         Schema::dropIfExists('actors');
     }
-}
+};
