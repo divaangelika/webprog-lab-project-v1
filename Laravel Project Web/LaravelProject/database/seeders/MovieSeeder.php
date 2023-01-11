@@ -83,6 +83,6 @@ class MovieSeeder extends Seeder
                 'imgBackground'=>'https://w0.peakpx.com/wallpaper/965/851/HD-wallpaper-avatar-2-2018-poster-fantasy-movie-avatar-2-navi-blue.jpg'
             ]
         ]);
+
     }
 }
-

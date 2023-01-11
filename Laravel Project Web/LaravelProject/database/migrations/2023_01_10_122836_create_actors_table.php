@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Actor extends Migration
+return new class extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class Actor extends Migration
      */
     public function up()
     {
-        Schema::create('movies', function (Blueprint $table) {
+        Schema::create('actors', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->string('gender');
@@ -21,7 +21,6 @@ class Actor extends Migration
             $table->date('dobActor');
             $table->date('pobActor');
             $table->string('imgActor');
-            $table->string('imgBackground');
             $table->float('popularity');
 
             // $table->rememberToken();
@@ -37,4 +36,4 @@ class Actor extends Migration
     {
         Schema::dropIfExists('actors');
     }
-}
+};

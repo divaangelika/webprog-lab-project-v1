@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Genre;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -15,11 +16,8 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             UserSeeder::class,
+            GenreSeeder::class,
             MovieSeeder::class
-            // PublishersSeeder::class,
-            // BookSeeder::class,
-            // CategoriesSeeder::class,
-            // BookCategorySeeder::class,
         ]);
     }
 }
