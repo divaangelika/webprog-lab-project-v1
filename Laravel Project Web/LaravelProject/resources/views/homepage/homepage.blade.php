@@ -154,16 +154,16 @@
                 <input type="search" class="form-control w-75" id="" name="title" placeholder="Search Movie">
             </form>
         </div>
-        <div class="mt-4">
+        {{-- <div class="mt-4">
             <form action="{{ url('/search') }}">
                 @foreach ($genres as $genre)
                     <button type="submit" class="btn btn-dark m-2" style="border-radius: 25px; width:12%;"
                         value="{{ $genre->id }}" name="genre">{{ $genre->name }}</button>
                 @endforeach
             </form>
-        </div>
+        </div> --}}
         <div class="d-flex align-items-center justify-content-between mt-4">
-            <div class="d-flex align-items-center">
+            {{-- <div class="d-flex align-items-center">
                 <p class="h5">Sort By:</p>
                 <form action="{{ url('/search') }}">
                     <button type="submit" name="sort" value="latest" class="btn btn-dark ml-3"
@@ -173,7 +173,7 @@
                     <button type="submit" name="sort" value="descending" class="btn btn-dark ml-3"
                         style="border-radius: 25px;">Z-A</button>
                 </form>
-            </div>
+            </div> --}}
             @if (Auth::check() && Auth()->user()->role == 'admin')
                 <a href="{{ url('movies/addmovie') }}"><button type="button" class="btn btn-danger">Add
                         Movie</button></a>
