@@ -150,7 +150,7 @@ class MovieController extends Controller
         $imgName = 'test-'.time().".".$extImg;
 
         $path = $request->img_banner->move('imgBg', $imgName);
-        echo "path $path <br>";
+        // echo "path $path <br>";
 
         // $newPath = asset('imgBg/'.$imgName);
         // echo "new path <a href = '$newPath'>$newPath</a>";
