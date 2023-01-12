@@ -1,12 +1,12 @@
 @extends('master.master')
 
-@if(!Auth::check())
+{{-- @if(!Auth::check())
 @include('partials.headerUnregister')
 @elseif(Auth::user()->role == 'admin')
 @include('partials.headerAdmin')
 @else
 @include('partials.headerRegistered')
-@endif
+@endif --}}
 
 
 @section('slider')

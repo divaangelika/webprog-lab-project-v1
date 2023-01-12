@@ -10,7 +10,7 @@
                 <a class="nav-link" href="">Movie</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="">Actor</a>
+                <a class="nav-link" href="{{ url('/actors') }}">Actor</a>
             </li>
             <button type="button"
                 class="btn btn-outline-primary">

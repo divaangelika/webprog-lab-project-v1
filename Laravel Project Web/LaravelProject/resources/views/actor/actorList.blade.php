@@ -16,7 +16,7 @@
             <div class="d-flex align-items-center">
                 <form action="{{ url('/actors/search') }}" class="mx-3">
                     <input type="search" class="form-control" id="" name="search"
-                        placeholder="Search Actor Address">
+                        placeholder="Search Actor">
                 </form>
                 {{-- if admin --}}
                 @if (Auth::user() && Auth::user()->type == 1)

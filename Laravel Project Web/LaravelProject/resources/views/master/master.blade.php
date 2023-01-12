@@ -27,6 +27,14 @@
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
+@if(!Auth::check())
+@include('partials.headerUnregister')
+@elseif(Auth::user()->role == 'admin')
+@include('partials.headerAdmin')
+@else
+@include('partials.headerRegistered')
+@endif
+
 </head>
 <body>
 

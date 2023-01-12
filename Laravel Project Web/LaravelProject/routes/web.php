@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomepageController;
 use App\Http\Controllers\MovieController;
+use App\Http\Controllers\ActorController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomepageController::class, 'load_homepage'])->name('home');
@@ -36,6 +37,11 @@ Route::get('/actors/{id}/editactor', [ActorController::class, 'editactorpage']);
 Route::post('/actors/{id}/editactor', [ActorController::class, 'editactor']);
 
 Route::delete('/actors/delete/{id}', [ActorController::class, 'deleteactor']);
+
+Route::get('/actors', [ActorController::class, 'actorpage']);
+Route::get('/actors/detail/{id}', [ActorController::class, 'actordetail']);
+
+Route::get('/actors/search', [ActorController::class, 'searchactor']);
 
 
 // Route::get('/login', '\App\Http\Controllers\AuthController@loginPage');

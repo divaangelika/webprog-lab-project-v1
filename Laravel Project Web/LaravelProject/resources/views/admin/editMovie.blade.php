@@ -1,9 +1,6 @@
 @extends('master.master')
 @section('Edit Movie')
 
-@include('partials.headerAdmin')
-
-
 @section('content')
 <div class="text-black m-5">
     @if (session('success'))
