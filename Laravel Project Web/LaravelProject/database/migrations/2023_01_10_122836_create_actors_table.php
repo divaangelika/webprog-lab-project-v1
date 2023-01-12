@@ -17,9 +17,9 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('gender');
-            $table->string('biography');
+            $table->longText('biography');
             $table->date('dobActor');
-            $table->date('pobActor');
+            $table->string('pobActor');
             $table->string('imgActor');
             $table->float('popularity')->default(0);
 
