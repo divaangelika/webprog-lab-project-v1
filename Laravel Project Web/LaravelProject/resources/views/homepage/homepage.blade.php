@@ -86,9 +86,9 @@
                 </div>
                 <div class="carousel-caption d-none d-md-block text-left">
                     <p>
-                        @foreach ($genreMovies as $genreMovie)
-                            @if ($genreMovie->movie_id == $moviesRandom[0]->id)
-                                {{ $genreMovie->genre->name }} |
+                        @foreach ($movieGenres as $movieGenre)
+                            @if ($movieGenres->movie_id == $moviesRandom[0]->id)
+                                {{ $movieGenres->genre->name }} |
                             @endif
                         @endforeach {{ $moviesRandom[0]->release_date }}
                     </p>
@@ -118,9 +118,9 @@
                 </div>
                 <div class="carousel-caption d-none d-md-block text-left">
                     <p>
-                        @foreach ($genreMovies as $genreMovie)
-                            @if ($genreMovie->movie_id == $moviesRandom[1]->id)
-                                {{ $genreMovie->genre->name }} |
+                        @foreach ($movieGenres as $movieGenre)
+                            @if ($movieGenre->movie_id == $moviesRandom[1]->id)
+                                {{ $movieGenre->genre->name }} |
                             @endif
                         @endforeach {{ $moviesRandom[1]->release_date }}
                     </p>
