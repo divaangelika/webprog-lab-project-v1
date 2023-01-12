@@ -15,7 +15,7 @@
                 <div class="pickgradient w-100" style="height:80vh; overflow: hidden;">
                     <a href="{{ url('movies/detail/' . $moviesRandom[0]->id) }}">
                         <img class="d-block w-100 image1"
-                            src="{{ asset('storage/imgBg/' . $moviesRandom[0]->img_background) }}" alt="First slide">
+                            src="{{ $moviesRandom[0]->img_background }}" alt="First slide">
                     </a>
                 </div>
                 <div class="carousel-caption d-none d-md-block text-left">
