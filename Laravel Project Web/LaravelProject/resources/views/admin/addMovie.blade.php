@@ -8,8 +8,8 @@
         {{Session::get('success')}}
     </div>
     @endif
-    <h4 class="fw-bold">@if($movie) Edit @else Create @endif Movie</h4>
-    <form @if($movie) action="{{url('movies/editmovies/' . $movie->id) }}" @endif class="d-flex flex-column" method="POST" enctype="multipart/form-data">
+    <h4 class="fw-bold">Create Movie</h4>
+    <form action="{{url('movies/addmovie/') }}" class="d-flex flex-column" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="mb-3">
             <label for="title" class="form-label">Title</label>
@@ -146,7 +146,7 @@
             @enderror
         </div>
 
-        <button type="submit" class="btn btn-danger mt-3">@if($movie) Edit @else Create @endif</button>
+        <button type="submit" class="btn btn-danger mt-3">Create</button>
     </form>
 </div>
 
@@ -159,6 +159,3 @@
     })
 </script>
 @endsection
-
-
-

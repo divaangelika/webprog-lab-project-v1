@@ -54,7 +54,7 @@ class MovieController extends Controller
         $movie = null;
         $genres = Genre::all();
         $actors = Actor::all();
-        return view('admin.editMovie', compact('genres', 'actors', 'movie'));
+        return view('admin.addMovie', compact('genres', 'actors', 'movie'));
     }
 
     public function editMoviePage($id)
@@ -143,6 +143,8 @@ class MovieController extends Controller
             'img_thumbnail' => 'required | mimes:jpeg,png,jpg,gif',
             'img_banner' => 'required | mimes:jpeg,png,jpg,gif',
         ]);
+        // dd($request);
+        echo "$request";
 
         // $imageThumbnail = $request->file('img_thumbnail');
         // Storage::putFileAs('/public/imgBg/', $imageThumbnail, $imageThumbnail->getClientOriginalName());
