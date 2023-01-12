@@ -12,7 +12,7 @@
         style='background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)),url("{{ asset($movie->img_background) }}"); background-position:center; background-repeat:no-repeat; background-size:cover;'>
         <div class="d-flex ">
             <div class="col-4">
-                <img src="{{ asset('storage/poster/' . $movie->img_thumbnail) }}" alt="" class="w-100 rounded"
+                <img src="{{ $movie->img_thumbnail }}" alt="" class="w-100 rounded"
                     style="z-index:1;">
             </div>
             <div class="col-6 ">
@@ -64,7 +64,7 @@
             @foreach ($actors as $actor)
                 <a href="{{ url('actors/detail/' . $actor->actor->id) }}" class="text-decoration-none text-reset">
                     <div class="card m-2 border-0" style="width: 18rem;">
-                        <img class="card-img-top" src="{{ asset('storage/actor/' . $actor->actor->img_url) }}"
+                        <img class="card-img-top" src="{{ $actor->actor->img_url }}"
                             alt="Card image cap" style="z-index:1; height:30vh; object-fit: cover;">
                         <div class="card-body bg-danger">
                             <p class="card-text font-weight-bold">{{ $actor->actor->name }}</p>
@@ -84,7 +84,7 @@
                 <div class="card m-2 border-0 bg-transparent" style="width: 18rem;">
                     <a href="{{ url('movies/detail/' . $movie->id) }}" class="text-decoration-none">
                         <img class="card-img-top bg-dark h-100 border-top border-0"
-                            src="{{ url('storage/poster/' . $movie->img_thumbnail) }}" alt="Card image cap"
+                            src="{{ $movie->img_thumbnail }}" alt="Card image cap"
                             style="z-index:1; object-fit: cover;">
                     </a>
                     <div class="card-body bg-dark rounded-bottom">
