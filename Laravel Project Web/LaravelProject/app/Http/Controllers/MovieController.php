@@ -14,62 +14,6 @@ use Illuminate\Support\Facades\Storage;
 
 class MovieController extends Controller
 {
-    // public function viewMoviePage($movieID)
-    // {
-    //     return view('movieDetail')
-    //         ->with('movie', Movie::findOrFail($movieID));
-    // }
-
-    // public function manage(Request $request)
-    // {
-    //     if ($request->search) {
-    //         return view('editMovie')
-    //             ->with('products', Movie::where('name', 'like', '%' . $request->search . '%')->get());
-    //     } else {
-    //         return view('editMovie')
-    //             ->with('products', Movie::all());
-    //     }
-    // }
-
-    // public function addMoviePage(Request $request)
-    // {
-    //     $genres = Genre::all();
-    //     return view('admin.addMovie', ['genres' => $genres]);
-    // }
-
-    // public function addMovie(Request $request)
-    // {
-    //     $request->validate([
-    //         'title' => 'required',
-    //         'description' => 'required',
-    //         'genre_id' => 'required',
-    //         'director' => 'required',
-    //         'releaseDate' => 'required',
-    //         'imgThumbnail' => 'required|mimes:jpeg,jpg,png',
-    //         'imgBackground' => 'required|mimes:jpeg,jpg,png'
-    //     ]);
-
-    //     $image = $request->file('imgThumbnail');
-    //     $imageThumbnail = $image->hashName();
-    //     $image->storeAs('/public/pictures/imgThumbnail', $imageThumbnail);
-
-    //     $image = $request->file('imgBackground');
-    //     $imageBackground = $image->hashName();
-    //     $image->storeAs('/public/pictures/imgBackground', $imageBackground);
-
-    //     // dd($request->all());
-
-    //     Movie::insert([
-    //         'name' => $request->nameProduct,
-    //         'category_id' => $request->categoryProduct,
-    //         'detail' => $request->detailProduct,
-    //         'price' => $request->priceProduct,
-    //         'imgThumbnail' => $imageThumbnail,
-    //         'imgBackground' => $imageBackground
-    //     ]);
-    //     return redirect()->route('');
-    // }
-
     public function index()
     {
         $movies = Movie::all();
