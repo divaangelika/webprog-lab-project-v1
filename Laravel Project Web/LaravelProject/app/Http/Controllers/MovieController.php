@@ -50,7 +50,7 @@ class MovieController extends Controller
         $movie = null;
         $genres = Genre::all();
         $actors = Actor::all();
-        return view('admin.editmovie', compact('genres', 'actors', 'movie'));
+        return view('admin.editMovie', compact('genres', 'actors', 'movie'));
     }
 
     public function editMoviePage($id)
@@ -60,7 +60,7 @@ class MovieController extends Controller
         $characters = MovieActor::where('movie_id', $id)->get();
         $genres = Genre::all();
         $actors = Actor::all();
-        return view('admin.editmovie', compact('genres', 'actors', 'movie', 'genreMovies', 'characters'));
+        return view('admin.editMovie', compact('genres', 'actors', 'movie', 'genreMovies', 'characters'));
     }
 
     public function editMovie(Request $request, $id)
