@@ -13,7 +13,7 @@ class CreateMovieActorTable extends Migration
      */
     public function up()
     {
-        Schema::create('movie_actor', function (Blueprint $table) {
+        Schema::create('movie_actors', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('movie_id');
             $table->unsignedBigInteger('actor_id');
@@ -31,6 +31,6 @@ class CreateMovieActorTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('movie_actor');
+        Schema::dropIfExists('movie_actors');
     }
 }
