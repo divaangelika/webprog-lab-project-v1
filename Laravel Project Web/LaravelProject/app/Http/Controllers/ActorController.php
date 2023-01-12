@@ -28,7 +28,7 @@ class ActorController extends Controller
         $actor = Actor::find($id);
         $movies = movieActor::where('actor_id', $id)->get();
         $movieActors = movieActor::all();
-        return view('actor.actorDetail', ['actor' => $actor, 'movies' => $movies, 'characters' => $movieActors,'movies'=>$movies]);
+        return view('actor.actorDetail', ['actor' => $actor, 'movies' => $movies, 'movieActors' => $movieActors,'movies'=>$movies]);
     }
 
     public function addactorpage()

@@ -13,7 +13,7 @@
             <div class="col-4">
                 <img src="{{ url('storage/actor/' . $actor->imgActor) }}" alt=""
                     class="w-100 rounded border-white position-relative">
-                @if (Auth::user() && Auth::user()->type == 1)
+                @if (Auth::user() && Auth::user()->role == 'admin')
                     <a href="{{ url('actors/' . $actor->id . '/editactor') }}"><button
                             class="rounded-circle bg-danger text-white py-4 px-4 position-absolute top-0" style="right:2%"><i
                                 class="fa-solid fa-xl fa-pencil"></i></button></a>
