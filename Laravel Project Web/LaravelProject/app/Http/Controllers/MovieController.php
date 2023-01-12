@@ -152,8 +152,8 @@ class MovieController extends Controller
         $path = $request->img_banner->move('imgBg', $imgName);
         echo "path $path <br>";
 
-        $newPath = asset('imgBg/'.$imgName);
-        echo "new path <a href = '$newPath'>$newPath</a>";
+        // $newPath = asset('imgBg/'.$imgName);
+        // echo "new path <a href = '$newPath'>$newPath</a>";
 
 
         // $imageBanner = $request->file('img_banner');
@@ -167,7 +167,7 @@ class MovieController extends Controller
         $movie->director = $request->director;
         $movie->releaseDate = $request->releaseDate;
         $movie->img_thumbnail = $imageThumbnail->getClientOriginalName();
-        $movie->img_background = $imageBanner->getClientOriginalName();
+        $movie->img_background = $path;
         $movie->save();
         foreach ($request->genre as $genre) {
             $movieGenres = new MovieGenre();
