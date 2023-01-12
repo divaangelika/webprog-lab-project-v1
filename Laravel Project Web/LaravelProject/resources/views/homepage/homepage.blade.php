@@ -47,7 +47,7 @@
                 <div class="pickgradient w-100" style="height:80vh; overflow: hidden;">
                     <a href="{{ url('movies/detail/' . $moviesRandom[1]->id) }}">
                         <img class="d-block w-100 image1"
-                            src="{{ asset('storage/img_background/' . $moviesRandom[1]->img_background) }}" alt="First slide">
+                            src="{{$moviesRandom[1]->img_background}}" alt="First slide">
                     </a>
                 </div>
                 <div class="carousel-caption d-none d-md-block text-left">
@@ -79,7 +79,7 @@
                 <div class="pickgradient w-100" style="height:80vh; overflow: hidden;">
                     <a href="{{ url('movies/detail/' . $moviesRandom[2]->id) }}">
                         <img class="d-block w-100 image1"
-                            src="{{ asset('storage/banner/' . $moviesRandom[2]->img_background) }}" alt="First slide">
+                            src="{{$moviesRandom[2]->img_background}}" alt="First slide">
                     </a>
                 </div>
                 <div class="carousel-caption d-none d-md-block text-left">
@@ -130,7 +130,7 @@
             <div class="card m-2 border-0 bg-transparent" style="width: 18rem;">
                 <a href="{{ url('movies/detail/' . $movie->id) }}" class="text-decoration-none">
                     <img class="card-img-top bg-dark h-100 border-top border-0"
-                        src="{{ url('storage/poster/' . $movie->img_thumbnail) }}" alt="Card image cap"
+                        src="{{ $movie->img_thumbnail }}" alt="Card image cap"
                         style="z-index:1; object-fit: cover;">
                 </a>
                 <div class="card-body bg-dark rounded-bottom">
@@ -184,7 +184,7 @@
                 <div class="card m-2 border-0 bg-transparent" style="width: 18rem;">
                     <a href="{{ url('movies/detail/' . $movie->id) }}" class="text-decoration-none">
                         <img class="card-img-top bg-dark h-100 border-top border-0"
-                            src="{{ url('storage/poster/' . $movie->img_thumbnail) }}" alt="Card image cap"
+                            src="{{ $movie->img_thumbnail }}" alt="Card image cap"
                             style="z-index:1; object-fit: cover;">
                     </a>
                     <div class="card-body bg-dark rounded-bottom">
