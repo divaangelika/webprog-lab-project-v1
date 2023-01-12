@@ -119,7 +119,7 @@
     </div>
 
     <!-- popular -->
-    {{-- <div class="d-flex align-items-center">
+    <div class="d-flex align-items-center">
         <i class="fa-solid fa-fire fa-xl m-4"></i>
         <p class="h3">Popular</p>
     </div>
@@ -252,7 +252,7 @@
                 }
             })
         });
-    </script> --}}
+    </script>
 
 
 @endsection
