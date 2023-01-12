@@ -9,7 +9,7 @@
     </div>
     @endif
     <h4 class="fw-bold">Create Movie</h4>
-    <form action="{{url('movies/addmovie/') }}" class="d-flex flex-column" method="POST" enctype="multipart/form-data">
+    <form action="{{url('/movies/addmovie/') }}" class="d-flex flex-column" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="mb-3">
             <label for="title" class="form-label">Title</label>
