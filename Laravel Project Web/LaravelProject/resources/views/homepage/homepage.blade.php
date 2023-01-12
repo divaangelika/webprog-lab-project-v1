@@ -174,7 +174,7 @@
                         style="border-radius: 25px;">Z-A</button>
                 </form>
             </div>
-            @if (Auth::check() && Auth()->user()->type == 1)
+            @if (Auth::check() && Auth()->user()->role == 'admin')
                 <a href="{{ url('movies/addmovie') }}"><button type="button" class="btn btn-danger">Add
                         Movie</button></a>
             @endif

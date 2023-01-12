@@ -18,8 +18,8 @@ Route::post('/register', [AuthController::class, 'registerMember']);
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
 // admin
-Route::get('/addMovie', [MovieController::class, 'addMoviePage'])->name('add-movie');
-Route::post('/addMovie', [MovieController::class, 'addMovie'])->name('add-movie-database');
+// Route::get('/addMovie', [MovieController::class, 'addMoviePage'])->name('add-movie');
+// Route::post('/addMovie', [MovieController::class, 'addMovie'])->name('add-movie-database');
 
 Route::get('/movies/addmovie', [MovieController::class, 'addMoviePage']);
 Route::post('/movies/addmovie', [MovieController::class, 'addMovie']);
