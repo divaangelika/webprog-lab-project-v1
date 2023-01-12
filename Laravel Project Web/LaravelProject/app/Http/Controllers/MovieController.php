@@ -42,7 +42,7 @@ class MovieController extends Controller
         foreach ($moviesRandom as $movieRandom) {
             $movieRandom->release_date = substr($movieRandom->release_date, 0, 4);
         }
-        return view('home', compact('movies', 'genres', 'moviesRandom', 'genreMovies', 'popularMovies'));
+        return view('home', compact('movies', 'genres', 'moviesRandom', 'movieGenres', 'popularMovies'));
     }
 
     public function addMoviePage()
