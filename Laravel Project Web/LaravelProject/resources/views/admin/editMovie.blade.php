@@ -27,13 +27,13 @@
         </div>
         <div class="mb-3">
             @if($movie)
-            @foreach($genreMovies as $genreMovie)
+            @foreach($movieGenres as $movieGenre)
             <div class="add-genre">
                 <label for="">Genre</label>
                 <select class="form-select bg-blackdark border-0 text-black" aria-label="" name="genre[]">
                     <option disabled>Select an option</option>
                     @foreach($genres as $genre)
-                    @if($genreMovie->genre->name == $genre->name)
+                    @if($movieGenre->genre->name == $genre->name)
                     <option value="{{$genre->id}}" selected>{{$genre->name}}</option>
                     @else
                     <option value="{{$genre->id}}">{{$genre->name}}</option>
@@ -63,14 +63,14 @@
         <p>Actors</p>
         <div class="m-4">
             @if($movie)
-            @foreach($characters as $character)
+            @foreach($movieActors as $movieActor)
             <div class="row add-character">
                 <div class="col">
                     <label for="mb-3">Actor</label>
                     <select class="mt-2 form-select text-black bg-blackdark border-0" aria-label="" name="actor[]">
                         <option selected disabled>-- Open this select menu --</option>
                         @foreach($actors as $actor)
-                        @if($actor->name == $character->actor->name)
+                        @if($actor->name == $movieActor->actor->name)
                         <option value="{{$actor->id}}" selected>{{$actor->name}}</option>
                         @else
                         <option value="{{$actor->id}}">{{$actor->name}}</option>
@@ -83,7 +83,7 @@
                 </div>
                 <div class="col">
                     <label for="charactername" class="form-label">Character Name</label>
-                    <input type="text" class="form-control text-black" id="charactername" name="character_name[]" value="{{$character->name}}" >
+                    <input type="text" class="form-control text-black" id="charactername" name="character_name[]" value="{{$movieActor->name}}" >
                     @error('character_name')
                     {{ $message }}
                     @enderror

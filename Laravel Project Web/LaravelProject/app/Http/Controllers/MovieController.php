@@ -148,7 +148,7 @@ class MovieController extends Controller
         $imageBanner = $request->file('img_banner');
         Storage::putFileAs('/public/banner/', $imageBanner, $imageBanner->getClientOriginalName());
 
-        dd($request->all());
+        // dd($request->all());
 
         $movie = new Movie();
         $movie->title = $request->title;
