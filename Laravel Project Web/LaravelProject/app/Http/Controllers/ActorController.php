@@ -47,6 +47,8 @@ class ActorController extends Controller
             'popularity' => 'required | numeric'
         ]);
 
+        // dd($request->all());
+
         $image = $request->file('imgActor');
         Storage::putFileAs('/public/actor/', $image, $image->getClientOriginalName());
 
@@ -56,7 +58,7 @@ class ActorController extends Controller
         $actor->biography = $request->biography;
         $actor->dobActor = $request->dobActor;
         $actor->pobActor = $request->pobActor;
-        $actor->img_url = $image->getClientOriginalName();
+        $actor->imgActor = $image->getClientOriginalName();
         $actor->popularity = $request->popularity;
         $actor->save();
         return redirect('/actors')->with('success', 'Success add actor');
