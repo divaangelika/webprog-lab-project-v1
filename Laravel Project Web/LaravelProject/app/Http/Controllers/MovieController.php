@@ -81,11 +81,11 @@ class MovieController extends Controller
             'img_banner' => 'required | mimes:jpeg,png,jpg,gif',
         ]);
 
-        $imageThumbnail = $request->file('img_thumbnail');
-        Storage::putFileAs('/public/poster/', $imageThumbnail, $imageThumbnail->getClientOriginalName());
+        // $imageThumbnail = $request->file('img_thumbnail');
+        // Storage::putFileAs('/public/poster/', $imageThumbnail, $imageThumbnail->getClientOriginalName());
 
-        $imageBanner = $request->file('img_banner');
-        Storage::putFileAs('/public/banner/', $imageBanner, $imageBanner->getClientOriginalName());
+        // $imageBanner = $request->file('img_banner');
+        // Storage::putFileAs('/public/banner/', $imageBanner, $imageBanner->getClientOriginalName());
 
         $movie = Movie::find($id);
         $movie->update([
