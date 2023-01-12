@@ -5,7 +5,7 @@ use App\Http\Controllers\MovieController;
 use App\Http\Controllers\ActorController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', [MovieController::class, 'index'])->name('home');
+Route::get('/', [MovieController::class, 'home'])->name('home');
 
 # Route untuk Login
 Route::get('/login', [AuthController::class, 'loginPage']);

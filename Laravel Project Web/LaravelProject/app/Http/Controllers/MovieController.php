@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Storage;
 
 class MovieController extends Controller
 {
-    public function index()
+    public function home()
     {
         $movies = Movie::all();
 
