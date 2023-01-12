@@ -39,10 +39,12 @@ class MovieController extends Controller
 
         $movieGenres = MovieGenre::all();
 
-        foreach ($moviesRandom as $movieRandom) {
-            $movieRandom->release_date = substr($movieRandom->release_date, 0, 4);
-        }
-        return view('home', compact('movies', 'genres', 'moviesRandom', 'movieGenres', 'popularMovies'));
+        dd($moviesRandom);
+
+        // foreach ($moviesRandom as $movieRandom) {
+        //     $movieRandom->release_date = substr($movieRandom->release_date, 0, 4);
+        // }
+        return view('homepage.homepage', compact('movies', 'genres', 'moviesRandom', 'movieGenres', 'popularMovies'));
     }
 
     public function addMoviePage()

@@ -62,8 +62,6 @@
 
 @endsection --}}
 
-
-
 @extends('master.master')
 
 @section('Movie List')
