@@ -17,7 +17,7 @@ class CreateWatchlistsTable extends Migration
             $table->id();
             $table->foreignId('user_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade')->constrained();
             $table->foreignId('movie_id')->references('id')->on('movies')->onUpdate('cascade')->onDelete('cascade')->constrained();
-            $table->string('status')->default('planning');
+            $table->string('status')->default('OnGoing');
         });
     }
 

@@ -17,9 +17,15 @@ class Movie extends Model
         'img_background'
     ];
 
-    public function movie()
-    {
-        return $this->belongsTo(Genre::class);
-        return $this->belongsTo(Actor::class);
+    public function movieactor(){
+        return $this->hasMany(MovieActor::class);
+    }
+
+    public function watchlist(){
+        return $this->hasMany(Watchlist::class);
+    }
+
+    public function moviegenre(){
+        return $this->hasMany(MovieGenre::class);
     }
 }

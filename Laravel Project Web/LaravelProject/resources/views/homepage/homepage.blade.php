@@ -86,7 +86,7 @@
                     <p>
                         @foreach ($movieGenres as $movieGenre)
                             @if ($movieGenres->movie_id == $moviesRandom[0]->id)
-                                {{ $movieGenres->genre->name }} |
+                                {{ $movieGenre->genre->name }} |
                             @endif
                         @endforeach {{ $moviesRandom[0]->release_date }}
                     </p>
@@ -180,10 +180,10 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
-    </div>
+    </div> --}}
 
     <!-- popular -->
-    <div class="d-flex align-items-center">
+    {{-- <div class="d-flex align-items-center">
         <i class="fa-solid fa-fire fa-xl m-4"></i>
         <p class="h3">Popular</p>
     </div>

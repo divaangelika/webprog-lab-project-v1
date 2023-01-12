@@ -1,12 +1,11 @@
 <?php
 
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\HomepageController;
 use App\Http\Controllers\MovieController;
 use App\Http\Controllers\ActorController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', [HomepageController::class, 'load_homepage'])->name('home');
+Route::get('/', [MovieController::class, 'index']);
 
 # Route untuk Login
 Route::get('/login', [AuthController::class, 'loginPage']);

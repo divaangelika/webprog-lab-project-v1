@@ -17,8 +17,8 @@ class Actor extends Model
         'popularity'
     ];
 
-    public function category()
+    public function movieactor()
     {
-        return $this->belongsTo(Genre::class);
+        return $this->hasMany(MovieActor::class);
     }
 }
