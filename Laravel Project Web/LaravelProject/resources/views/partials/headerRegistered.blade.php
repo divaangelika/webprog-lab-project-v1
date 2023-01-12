@@ -8,10 +8,10 @@
                 <a class="nav-link" href="/">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="">Movie</a>
+                <a class="nav-link" href="{{ url('/#showMovies') }}">Movies</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="">Actor</a>
+                <a class="nav-link" href="{{ url('/actors') }}">Actor</a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Member</a>

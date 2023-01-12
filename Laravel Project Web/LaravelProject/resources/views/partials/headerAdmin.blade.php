@@ -7,10 +7,10 @@
                 <a class="nav-link" href="/">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="">Movie</a>
+                <a class="nav-link text-white" href="{{ url('/#showMovies') }}">Movies</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/actors">Actor</a>
+                <a class="nav-link" href="{{ url('/actors') }}">Actor</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/addMovie">Add Movie</a>

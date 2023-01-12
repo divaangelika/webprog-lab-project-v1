@@ -251,7 +251,7 @@ class MovieController extends Controller
         foreach ($movies as $mov) {
             $mov->releaseDate = substr($mov->releaseDate, 0, 4);
         }
-        return view('homepage.moviedetail', compact('movie', 'genres', 'actors', 'movies'));
+        return view('homepage.movieDetail', compact('movie', 'genres', 'actors', 'movies'));
     }
 
     public function deleteMovie($id){
