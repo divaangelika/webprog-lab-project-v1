@@ -27,6 +27,8 @@ Route::post('/movies/addmovie', [MovieController::class, 'addMovie']);
 Route::get('movies/editmovies/{id}', [MovieController::class, 'editMoviePage']);
 Route::post('movies/editmovies/{id}', [MovieController::class, 'editMovie']);
 
+Route::get('/movies/detail/{id}', [MovieController::class, 'movieDetail']);
+
 Route::post('movies/deletemovie/{id}', [MovieController::class, 'deleteMovie']);
 
 Route::get('/actors/addactor', [ActorController::class, 'addactorpage']);
