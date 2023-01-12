@@ -19,7 +19,7 @@
                         placeholder="Search Actor">
                 </form>
                 {{-- if admin --}}
-                @if (Auth::user() && Auth::user()->type == 1)
+                @if (Auth::user() && Auth::user()->role == 'admin')
                     <a href="{{ url('actors/addactor') }}"><button type="button" class="btn btn-danger">Add
                             Actor</button></a>
                 @endif
