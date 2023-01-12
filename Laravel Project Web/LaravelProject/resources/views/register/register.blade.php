@@ -1,5 +1,5 @@
 @extends('master.master')
-@include('partials.headerUnregister')
+{{-- @include('partials.headerUnregister') --}}
 @section('register')
 {{-- <h1>test123</h1> --}}
 <div class="mt-5" style="justify-content:center; align-items:center; display:flex;">
