@@ -21,18 +21,18 @@ class MovieController extends Controller
         $genres = Genre::all();
 
         foreach ($movies as $movie) {
-            $movie->release_date = substr($movie->release_date, 0, 4);
+            $movie->releaseDate = substr($movie->releaseDate, 0, 4);
         }
 
         $popularMovies = Movie::with('watchlist')
             ->leftjoin('watchlists', 'movie_id', '=', 'movies.id')
-            ->select('movies.id', 'title', 'release_date', 'img_thumbnail', DB::raw('COUNT(movie_id) as watchlistCount'))
-            ->groupBy('movies.id', 'title', 'release_date', 'img_thumbnail')
+            ->select('movies.id', 'title', 'releaseDate', 'img_thumbnail', DB::raw('COUNT(movie_id) as watchlistCount'))
+            ->groupBy('movies.id', 'title', 'releaseDate', 'img_thumbnail')
             ->orderBy('watchlistCount', 'DESC')
             ->get();
 
         foreach ($popularMovies as $popularMovie) {
-            $popularMovie->release_date = substr($popularMovie->release_date, 0, 4);
+            $popularMovie->releaseDate = substr($popularMovie->releaseDate, 0, 4);
         }
 
         $moviesRandom = Movie::all()->random(3);
@@ -42,7 +42,7 @@ class MovieController extends Controller
         // dd($moviesRandom);
 
         foreach ($moviesRandom as $movieRandom) {
-            $movieRandom->release_date = substr($movieRandom->release_date, 0, 4);
+            $movieRandom->releaseDate = substr($movieRandom->releaseDate, 0, 4);
         }
         return view('homepage.homepage', compact('movies', 'genres', 'moviesRandom', 'movieGenres', 'popularMovies'));
     }
@@ -74,7 +74,7 @@ class MovieController extends Controller
             'actor' => 'required|array',
             'character_name' => 'required|array',
             'director' => 'required | min:3',
-            'release_date' => 'required',
+            'releaseDate' => 'required',
             'img_thumbnail' => 'required | mimes:jpeg,png,jpg,gif',
             'img_banner' => 'required | mimes:jpeg,png,jpg,gif',
         ]);
@@ -90,7 +90,7 @@ class MovieController extends Controller
             'title' => $request->title,
             'description' => $request->description,
             'director' => $request->director,
-            'release_date' => $request->release_date,
+            'releaseDate' => $request->releaseDate,
             'img_thumbnail' => $imageThumbnail->getClientOriginalName(),
             'img_background' => $imageBanner->getClientOriginalName(),
         ]);
@@ -137,7 +137,7 @@ class MovieController extends Controller
             'actor' => 'required|array',
             'character_name' => 'required|array',
             'director' => 'required | min:3',
-            'release_date' => 'required',
+            'releaseDate' => 'required',
             'img_thumbnail' => 'required | mimes:jpeg,png,jpg,gif',
             'img_banner' => 'required | mimes:jpeg,png,jpg,gif',
         ]);
@@ -152,7 +152,7 @@ class MovieController extends Controller
         $movie->title = $request->title;
         $movie->description = $request->description;
         $movie->director = $request->director;
-        $movie->release_date = $request->release_date;
+        $movie->releaseDate = $request->releaseDate;
         $movie->img_thumbnail = $imageThumbnail->getClientOriginalName();
         $movie->img_background = $imageBanner->getClientOriginalName();
         $movie->save();
@@ -176,55 +176,55 @@ class MovieController extends Controller
     {
         if ($request->sort == "latest") {
             $movies = Movie::with('genremovie')
-                ->select('movies.id', 'title', 'release_date', 'img_thumbnail')
+                ->select('movies.id', 'title', 'releaseDate', 'img_thumbnail')
                 ->where('title', 'LIKE', "%$request->title%")
                 ->where('genre_id', 'LIKE', "%$request->genre%")
                 ->join('genre_movies', 'movie_id', '=', 'movies.id')
-                ->groupBy('movies.id', 'title', 'release_date', 'img_thumbnail')
-                ->orderBy('release_date', 'desc')
+                ->groupBy('movies.id', 'title', 'releaseDate', 'img_thumbnail')
+                ->orderBy('releaseDate', 'desc')
                 ->get();
         } else if ($request->sort == "ascending") {
             $movies = Movie::with('genremovie')
-                ->select('movies.id', 'title', 'release_date', 'img_thumbnail')
+                ->select('movies.id', 'title', 'releaseDate', 'img_thumbnail')
                 ->where('title', 'LIKE', "%$request->title%")
                 ->where('genre_id', 'LIKE', "%$request->genre%")
                 ->join('genre_movies', 'movie_id', '=', 'movies.id')
-                ->groupBy('movies.id', 'title', 'release_date', 'img_thumbnail')
+                ->groupBy('movies.id', 'title', 'releaseDate', 'img_thumbnail')
                 ->orderBy('title', 'asc')
                 ->get();
         } else if ($request->sort == "descending") {
             $movies = Movie::with('genremovie')
-                ->select('movies.id', 'title', 'release_date', 'img_thumbnail')
+                ->select('movies.id', 'title', 'releaseDate', 'img_thumbnail')
                 ->where('title', 'LIKE', "%$request->title%")
                 ->where('genre_id', 'LIKE', "%$request->genre%")
                 ->join('genre_movies', 'movie_id', '=', 'movies.id')
-                ->groupBy('movies.id', 'title', 'release_date', 'img_thumbnail')
+                ->groupBy('movies.id', 'title', 'releaseDate', 'img_thumbnail')
                 ->orderBy('title', 'desc')
                 ->get();
         } else {
             $movies = Movie::with('genremovie')
-                ->select('movies.id', 'title', 'release_date', 'img_thumbnail')
+                ->select('movies.id', 'title', 'releaseDate', 'img_thumbnail')
                 ->where('title', 'LIKE', "%$request->title%")
                 ->where('genre_id', 'LIKE', "%$request->genre%")
                 ->join('genre_movies', 'movie_id', '=', 'movies.id')
-                ->groupBy('movies.id', 'title', 'release_date', 'img_thumbnail')
+                ->groupBy('movies.id', 'title', 'releaseDate', 'img_thumbnail')
                 ->get();
         }
 
         $genres = Genre::all();
 
         foreach ($movies as $movie) {
-            $movie->release_date = substr($movie->release_date, 0, 4);
+            $movie->releaseDate = substr($movie->releaseDate, 0, 4);
         }
 
         $popularMovies = Movie::with('watchlist')->leftjoin('watchlists', 'movie_id', '=', 'movies.id')
-            ->select('movies.id', 'title', 'release_date', 'img_thumbnail', DB::raw('COUNT(movie_id) as watchlistCount'))
-            ->groupBy('movies.id', 'title', 'release_date', 'img_thumbnail')
+            ->select('movies.id', 'title', 'releaseDate', 'img_thumbnail', DB::raw('COUNT(movie_id) as watchlistCount'))
+            ->groupBy('movies.id', 'title', 'releaseDate', 'img_thumbnail')
             ->orderBy('watchlistCount', 'DESC')
             ->get();
 
         foreach ($popularMovies as $popularMovie) {
-            $popularMovie->release_date = substr($popularMovie->release_date, 0, 4);
+            $popularMovie->releaseDate = substr($popularMovie->releaseDate, 0, 4);
         }
 
         $moviesRandom = Movie::all()->random(3);
@@ -232,7 +232,7 @@ class MovieController extends Controller
         $movieGenres = MovieGenre::all();
 
         foreach ($moviesRandom as $movieRandom) {
-            $movieRandom->release_date = substr($movieRandom->release_date, 0, 4);
+            $movieRandom->releaseDate = substr($movieRandom->releaseDate, 0, 4);
         }
         return view('home', compact('movies', 'genres', 'moviesRandom', 'genreMovies', 'popularMovies'));
     }
@@ -241,7 +241,7 @@ class MovieController extends Controller
     {
         $movie = Movie::find($id);
         $movie->img_background = "storage/banner/" . $movie->img_background;
-        $movie->release_date = substr($movie->release_date, 0, 4);
+        $movie->releaseDate = substr($movie->releaseDate, 0, 4);
 
         $genres = MovieGenre::where('movie_id', $id)->get();
 
@@ -249,7 +249,7 @@ class MovieController extends Controller
 
         $movies = Movie::where('id', '!=', $id)->get();
         foreach ($movies as $mov) {
-            $mov->release_date = substr($mov->release_date, 0, 4);
+            $mov->releaseDate = substr($mov->releaseDate, 0, 4);
         }
         return view('movie.moviedetail', compact('movie', 'genres', 'actors', 'movies'));
     }

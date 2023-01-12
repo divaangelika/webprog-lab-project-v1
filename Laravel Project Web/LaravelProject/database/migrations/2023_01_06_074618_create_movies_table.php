@@ -19,8 +19,8 @@ class CreateMoviesTable extends Migration
             $table->string('description');
             $table->string('director');
             $table->date('releaseDate');
-            $table->string('imgThumbnail');
-            $table->string('imgBackground');
+            $table->string('img_thumbnail');
+            $table->string('img_background');
 
             // $table->rememberToken();
         });
