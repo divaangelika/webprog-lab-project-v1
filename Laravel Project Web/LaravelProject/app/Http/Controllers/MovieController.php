@@ -11,6 +11,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Http\File;
+use Illuminate\Http\UploadedFile;
 
 class MovieController extends Controller
 {
@@ -142,11 +144,20 @@ class MovieController extends Controller
             'img_banner' => 'required | mimes:jpeg,png,jpg,gif',
         ]);
 
-        $imageThumbnail = $request->file('img_thumbnail');
-        Storage::putFileAs('/public/poster/', $imageThumbnail, $imageThumbnail->getClientOriginalName());
+        // $imageThumbnail = $request->file('img_thumbnail');
+        // Storage::putFileAs('/public/imgBg/', $imageThumbnail, $imageThumbnail->getClientOriginalName());
+        $extImg = $request->img_banner->getClientOriginalExtension();
+        $imgName = 'test-'.time().".".$extImg;
 
-        $imageBanner = $request->file('img_banner');
-        Storage::putFileAs('/public/banner/', $imageBanner, $imageBanner->getClientOriginalName());
+        $path = $request->img_banner->move('imgBg', $imgName);
+        echo "path $path <br>";
+
+        $newPath = asset('imgBg/'.$imgName);
+        echo "new path <a href = '$newPath'>$newPath</a>";
+
+
+        // $imageBanner = $request->file('img_banner');
+        // Storage::putFileAs('/public/imgBg/', $imageBanner, $imageBanner->getClientOriginalName());
 
         dd($request->all());
 
@@ -172,6 +183,7 @@ class MovieController extends Controller
             $characterMovie->save();
         }
         return redirect('/movies/addmovie')->with('success', 'Success add movie');
+
     }
 
     public function searchMovie(Request $request)
