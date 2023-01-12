@@ -13,8 +13,8 @@ class Movie extends Model
         'genre_id',
         'director',
         'releaseDate',
-        'imgThumbnail',
-        'imgBackground'
+        'img_thumbnail',
+        'img_background'
     ];
 
     public function movie()

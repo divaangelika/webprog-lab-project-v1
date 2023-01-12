@@ -21,7 +21,7 @@ return new class extends Migration
             $table->date('dobActor');
             $table->date('pobActor');
             $table->string('imgActor');
-            $table->float('popularity');
+            $table->float('popularity')->default(0);
 
             // $table->rememberToken();
         });
