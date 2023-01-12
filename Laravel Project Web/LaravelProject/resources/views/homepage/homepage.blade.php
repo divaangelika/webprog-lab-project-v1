@@ -15,7 +15,7 @@
                 <div class="pickgradient w-100" style="height:80vh; overflow: hidden;">
                     <a href="{{ url('movies/detail/' . $moviesRandom[0]->id) }}">
                         <img class="d-block w-100 image1"
-                            src="{{ asset('storage/banner/' . $moviesRandom[0]->img_background) }}" alt="First slide">
+                            src="{{ asset('storage/imgBg/' . $moviesRandom[0]->img_background) }}" alt="First slide">
                     </a>
                 </div>
                 <div class="carousel-caption d-none d-md-block text-left">
@@ -47,7 +47,7 @@
                 <div class="pickgradient w-100" style="height:80vh; overflow: hidden;">
                     <a href="{{ url('movies/detail/' . $moviesRandom[1]->id) }}">
                         <img class="d-block w-100 image1"
-                            src="{{ asset('storage/banner/' . $moviesRandom[1]->img_background) }}" alt="First slide">
+                            src="{{ asset('storage/img_background/' . $moviesRandom[1]->img_background) }}" alt="First slide">
                     </a>
                 </div>
                 <div class="carousel-caption d-none d-md-block text-left">
