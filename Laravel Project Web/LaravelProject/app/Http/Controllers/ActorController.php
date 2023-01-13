@@ -50,7 +50,7 @@ class ActorController extends Controller
         // dd($request->all());
 
         $image = $request->file('imgActor');
-        Storage::putFileAs('/public/actor/', $image, $image->getClientOriginalName());
+        Storage::putFileAs('public/actor/', $image, $image->getClientOriginalName());
 
         $actor = new Actor();
         $actor->name = $request->name;

@@ -18,7 +18,7 @@
                     <input type="search" class="form-control" id="" name="search"
                         placeholder="Search Actor">
                 </form>
-                
+
                 {{-- if admin --}}
                 @if (Auth::user() && Auth::user()->role == 'admin')
                     <a href="{{ url('actors/addactor') }}"><button type="button" class="btn btn-danger">Add

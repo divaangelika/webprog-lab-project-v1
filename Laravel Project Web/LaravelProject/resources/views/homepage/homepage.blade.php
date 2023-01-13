@@ -184,7 +184,7 @@
                 <div class="card m-2 border-0 bg-transparent" style="width: 18rem;">
                     <a href="{{ url('movies/detail/' . $movie->id) }}" class="text-decoration-none">
                         <img class="card-img-top bg-dark h-100 border-top border-0"
-                            src="{{ $movie->img_thumbnail }}" alt="Card image cap"
+                            src="{{ url('storage/poster/'. $movie->img_thumbnail) }}" alt="Card image cap"
                             style="z-index:1; object-fit: cover;">
                     </a>
                     <div class="card-body bg-dark rounded-bottom">

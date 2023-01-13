@@ -140,8 +140,8 @@
         </div>
         <div class="mb-3">
             <label for="background" class="form-label">Background Url</label>
-            <input class="form-control text-black" type="file" id="background" placeholder="No file choosen" name="img_banner">
-            @error('img_banner')
+            <input class="form-control text-black" type="file" id="background" placeholder="No file choosen" name="img_background">
+            @error('img_background')
             {{ $message }}
             @enderror
         </div>

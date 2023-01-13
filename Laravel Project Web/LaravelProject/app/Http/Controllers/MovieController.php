@@ -81,11 +81,11 @@ class MovieController extends Controller
             'img_banner' => 'required | mimes:jpeg,png,jpg,gif',
         ]);
 
-        // $imageThumbnail = $request->file('img_thumbnail');
-        // Storage::putFileAs('/public/poster/', $imageThumbnail, $imageThumbnail->getClientOriginalName());
+        $imageThumbnail = $request->file('img_thumbnail');
+        Storage::putFileAs('/public/poster/', $imageThumbnail, $imageThumbnail->getClientOriginalName());
 
-        // $imageBanner = $request->file('img_banner');
-        // Storage::putFileAs('/public/banner/', $imageBanner, $imageBanner->getClientOriginalName());
+        $imageBanner = $request->file('img_banner');
+        Storage::putFileAs('/public/banner/', $imageBanner, $imageBanner->getClientOriginalName());
 
         $movie = Movie::find($id);
         $movie->update([
@@ -141,22 +141,24 @@ class MovieController extends Controller
             'director' => 'required | min:3',
             'releaseDate' => 'required',
             'img_thumbnail' => 'required | mimes:jpeg,png,jpg,gif',
-            'img_banner' => 'required | mimes:jpeg,png,jpg,gif',
+            'img_background' => 'required | mimes:jpeg,png,jpg,gif',
         ]);
         // dd($request);
-        echo "$request";
+        // echo "$request";
 
-        // $imageThumbnail = $request->file('img_thumbnail');
-        // Storage::putFileAs('/public/imgBg/', $imageThumbnail, $imageThumbnail->getClientOriginalName());
-        $extImgBackground = $request->img_banner->getClientOriginalExtension();
-        $imgNameBackground = 'background-'.time().".".$extImgBackground;
-        $pathBackground = $request->img_banner->move('imgBg', $imgNameBackground);
+        $imageThumbnail = $request->file('img_thumbnail');
+        Storage::putFileAs('/public/thumbnail/', $imageThumbnail, $imageThumbnail->getClientOriginalName());
 
-        $extImgThumbnail = $request->img_thumbnail->getClientOriginalExtension();
-        $imgNameThumbnail = 'thumbnail-'.time().".".$extImgThumbnail;
-        $pathThumbnail = $request->img_thumbnail->move('imgBg', $imgNameThumbnail);
+        $imageBackground = $request->file('img_background');
+        Storage::putFileAs('/public/background/', $imageBackground, $imageBackground->getClientOriginalName());
 
+        // $extImgBackground = $request->img_banner->getClientOriginalExtension();
+        // $imgNameBackground = 'background-'.time().".".$extImgBackground;
+        // $pathBackground = $request->img_banner->move('imgBg', $imgNameBackground);
 
+        // $extImgThumbnail = $request->img_thumbnail->getClientOriginalExtension();
+        // $imgNameThumbnail = 'thumbnail-'.time().".".$extImgThumbnail;
+        // $pathThumbnail = $request->img_thumbnail->move('imgBg', $imgNameThumbnail);
         // echo "path $path <br>";
         // $newPath = asset('imgBg/'.$imgName);
         // echo "new path <a href = '$newPath'>$newPath</a>";
@@ -169,8 +171,8 @@ class MovieController extends Controller
         $movie->description = $request->description;
         $movie->director = $request->director;
         $movie->releaseDate = $request->releaseDate;
-        $movie->img_thumbnail = $pathThumbnail;
-        $movie->img_background = $pathBackground;
+        $movie->img_thumbnail = $imageThumbnail->getClientOriginalName();
+        $movie->img_background = $imageBackground->getClientOriginalName();
         $movie->save();
         foreach ($request->genre as $genre) {
             $movieGenres = new MovieGenre();
@@ -185,7 +187,8 @@ class MovieController extends Controller
             $characterMovie->name = $request->character_name[$i];
             $characterMovie->save();
         }
-        return redirect('/movies/addmovie')->with('success', 'Success add movie');
+        return redirect('/movies/addMovie')->with('success', 'Success add movie');
+        // return redirect('/movies')->with('success', 'Success add movie');
 
     }
 
