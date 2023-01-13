@@ -64,7 +64,7 @@ class MovieController extends Controller
         $movieActors = MovieActor::where('movie_id', $id)->get();
         $genres = Genre::all();
         $actors = Actor::all();
-        return view('admin.editMovie', compact('genres', 'actors', 'movie', 'genreMovies', 'movieActors'));
+        return view('admin.editMovie', compact('genres', 'actors', 'movie', 'movieGenres', 'movieActors'));
     }
 
     public function editMovie(Request $request, $id)

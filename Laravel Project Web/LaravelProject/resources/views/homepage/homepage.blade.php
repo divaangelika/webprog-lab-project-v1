@@ -28,7 +28,7 @@
                     </p>
                     <h2>{{ $moviesRandom[0]->title }}</h2>
                     <p>{{ $moviesRandom[0]->description }}</p>
-                    @if (Auth::user() && Auth::user()->type == 2)
+                    @if (Auth::user() && Auth::user()->role == 'user')
                         <button
                             class="border-0 btn py-3 bg-danger text-white watchlist fa-solid
                             @php $check=false @endphp
@@ -193,7 +193,7 @@
                         </a>
                         <div class="d-flex justify-content-between align-items-start">
                             <p class="card-text text-white">{{ $movie->release_date }}</p>
-                            @if (Auth::user() && Auth::user()->type == 2)
+                            @if (Auth::user() && Auth::user()->role == 'user')
                                 <button
                                     class="border-0 bg-transparent text-white watchlist fa-solid
             @php $check=false @endphp
