@@ -18,7 +18,7 @@
             <div class="col-6 ">
                 <div class="d-flex justify-content-between align-items-center">
                     <h1>{{ $movie->title }}</h1>
-                    @if (Auth::user() && Auth::user()->type == 1)
+                    @if (Auth::user() && Auth::user()->role == 'admin')
                         <div class="d-flex">
                             <a href="{{ url('movies/editmovies/' . $movie->id) }}"><i
                                     class="fa-solid fa-pen-to-square fa-xl mx-2 text-white"></i></a>
