@@ -18,6 +18,7 @@
                     <input type="search" class="form-control" id="" name="search"
                         placeholder="Search Actor">
                 </form>
+                
                 {{-- if admin --}}
                 @if (Auth::user() && Auth::user()->role == 'admin')
                     <a href="{{ url('actors/addactor') }}"><button type="button" class="btn btn-danger">Add
@@ -28,9 +29,9 @@
         <div class="d-flex flex-wrap justify-content-center" id="postData">
             @include('actor.actorData')
         </div>
-        <div class="ajax-load text-center" style="display:none">
+        {{-- <div class="ajax-load text-center" style="display:none">
             <img width="30" src="{{url('storage/refresh.gif')}}">
-        </div>
+        </div> --}}
     </div>
 
     <script type="text/javascript">
