@@ -147,24 +147,10 @@ class MovieController extends Controller
         // echo "$request";
 
         $imageThumbnail = $request->file('img_thumbnail');
-        Storage::putFileAs('/public/thumbnail/', $imageThumbnail, $imageThumbnail->getClientOriginalName());
+        Storage::putFileAs('public/thumbnail/', $imageThumbnail, $imageThumbnail->getClientOriginalName());
 
         $imageBackground = $request->file('img_background');
-        Storage::putFileAs('/public/background/', $imageBackground, $imageBackground->getClientOriginalName());
-
-        // $extImgBackground = $request->img_banner->getClientOriginalExtension();
-        // $imgNameBackground = 'background-'.time().".".$extImgBackground;
-        // $pathBackground = $request->img_banner->move('imgBg', $imgNameBackground);
-
-        // $extImgThumbnail = $request->img_thumbnail->getClientOriginalExtension();
-        // $imgNameThumbnail = 'thumbnail-'.time().".".$extImgThumbnail;
-        // $pathThumbnail = $request->img_thumbnail->move('imgBg', $imgNameThumbnail);
-        // echo "path $path <br>";
-        // $newPath = asset('imgBg/'.$imgName);
-        // echo "new path <a href = '$newPath'>$newPath</a>";
-        // $imageBanner = $request->file('img_banner');
-        // Storage::putFileAs('/public/imgBg/', $imageBanner, $imageBanner->getClientOriginalName());
-        // dd($request->all());
+        Storage::putFileAs('public/background/', $imageBackground, $imageBackground->getClientOriginalName());
 
         $movie = new Movie();
         $movie->title = $request->title;
@@ -182,8 +168,8 @@ class MovieController extends Controller
         }
         for ($i = 0; $i < sizeof($request->actor); $i++) {
             $characterMovie = new MovieActor();
-            $characterMovie->actor_id = $request->actor[$i];
             $characterMovie->movie_id = $movie->id;
+            $characterMovie->actor_id = $request->actor[$i];
             $characterMovie->name = $request->character_name[$i];
             $characterMovie->save();
         }

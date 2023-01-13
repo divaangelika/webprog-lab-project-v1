@@ -1,6 +1,6 @@
 @extends('master.master')
 
-@section('title', 'Create Actor')
+{{-- @section('title', 'Create Actor') --}}
 
 @section('content')
     <div class="text-black m-5">

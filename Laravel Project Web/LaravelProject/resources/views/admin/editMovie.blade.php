@@ -1,5 +1,5 @@
-@extends('master.master')
-{{-- @section('Edit Movie') --}}
+{{-- @extends('master.master')
+@section('Edit Movie')
 
 @section('content')
 <div class="text-black m-5">
@@ -161,4 +161,4 @@
 @endsection
 
 
-
+ --}}
