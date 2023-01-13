@@ -147,10 +147,10 @@ class MovieController extends Controller
         // echo "$request";
 
         $imageThumbnail = $request->file('img_thumbnail');
-        Storage::putFileAs('public/thumbnail/', $imageThumbnail, $imageThumbnail->getClientOriginalName());
+        Storage::putFileAs('/public/thumbnail/', $imageThumbnail, $imageThumbnail->getClientOriginalName());
 
         $imageBackground = $request->file('img_background');
-        Storage::putFileAs('public/background/', $imageBackground, $imageBackground->getClientOriginalName());
+        Storage::putFileAs('/public/background/', $imageBackground, $imageBackground->getClientOriginalName());
 
         $movie = new Movie();
         $movie->title = $request->title;
