@@ -11,7 +11,7 @@
                 </div>
             @endif
             <div class="col-4">
-                <img src="{{ url('storage/public/actor/' . $actor->imgActor) }}" alt=""
+                <img src="{{ url('storage/actor/' . $actor->imgActor) }}" alt=""
                     class="w-100 rounded border-white position-relative">
                 @if (Auth::user() && Auth::user()->role == 'admin')
                     <a href="{{ url('actors/' . $actor->id . '/editactor') }}"><button

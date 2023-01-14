@@ -78,14 +78,14 @@ class MovieController extends Controller
             'director' => 'required | min:3',
             'releaseDate' => 'required',
             'img_thumbnail' => 'required | mimes:jpeg,png,jpg,gif',
-            'img_banner' => 'required | mimes:jpeg,png,jpg,gif',
+            'img_background' => 'required | mimes:jpeg,png,jpg,gif',
         ]);
 
         $imageThumbnail = $request->file('img_thumbnail');
-        Storage::putFileAs('/public/poster/', $imageThumbnail, $imageThumbnail->getClientOriginalName());
+        Storage::putFileAs('/public/thumbnail/', $imageThumbnail, $imageThumbnail->getClientOriginalName());
 
-        $imageBanner = $request->file('img_banner');
-        Storage::putFileAs('/public/banner/', $imageBanner, $imageBanner->getClientOriginalName());
+        $imageBackground = $request->file('img_background');
+        Storage::putFileAs('/public/background/', $imageBackground, $imageBackground->getClientOriginalName());
 
         $movie = Movie::find($id);
         $movie->update([
@@ -94,7 +94,7 @@ class MovieController extends Controller
             'director' => $request->director,
             'releaseDate' => $request->releaseDate,
             'img_thumbnail' => $imageThumbnail->getClientOriginalName(),
-            'img_background' => $imageBanner->getClientOriginalName(),
+            'img_background' => $imageBackground->getClientOriginalName(),
         ]);
         $movieGenres = MovieGenre::where('movie_id', $id)->get();
         for ($i = 0; $i < sizeof($movieGenres); $i++) {
@@ -130,6 +130,54 @@ class MovieController extends Controller
         return redirect("/movies/detail/$id")->with('success', 'Success edit movie');
     }
 
+    // public function addMovie(Request $request)
+    // {
+    //     $this->validate($request, [
+    //         'title' => 'required | min:2 | max:50',
+    //         'description' => 'required | min:8',
+    //         'genre' => 'required|array',
+    //         'actor' => 'required|array',
+    //         'character_name' => 'required|array',
+    //         'director' => 'required | min:3',
+    //         'releaseDate' => 'required',
+    //         'img_thumbnail' => 'required | mimes:jpeg,png,jpg,gif',
+    //         'img_background' => 'required | mimes:jpeg,png,jpg,gif',
+    //     ]);
+    //     // dd($request);
+    //     // echo "$request";
+
+    //     $imageThumbnail = $request->file('img_thumbnail');
+    //     Storage::putFileAs('/public/thumbnail/', $imageThumbnail, $imageThumbnail->getClientOriginalName());
+
+    //     $imageBackground = $request->file('img_background');
+    //     Storage::putFileAs('/public/background/', $imageBackground, $imageBackground->getClientOriginalName());
+
+    //     $movie = new Movie();
+    //     $movie->title = $request->title;
+    //     $movie->description = $request->description;
+    //     $movie->director = $request->director;
+    //     $movie->releaseDate = $request->releaseDate;
+    //     $movie->img_thumbnail = $imageThumbnail->getClientOriginalName();
+    //     $movie->img_background = $imageBackground->getClientOriginalName();
+    //     $movie->save();
+    //     foreach ($request->genre as $genre) {
+    //         $movieGenres = new MovieGenre();
+    //         $movieGenres->genre_id = $genre;
+    //         $movieGenres->movie_id = $movie->id;
+    //         $movieGenres->save();
+    //     }
+    //     for ($i = 0; $i < sizeof($request->actor); $i++) {
+    //         $characterMovie = new MovieActor();
+    //         $characterMovie->movie_id = $movie->id;
+    //         $characterMovie->actor_id = $request->actor[$i];
+    //         $characterMovie->name = $request->character_name[$i];
+    //         $characterMovie->save();
+    //     }
+    //     return redirect('/movies/addmovie')->with('success', 'Success add movie');
+    //     // return redirect('/movies')->with('success', 'Success add movie');
+
+    // }
+
     public function addMovie(Request $request)
     {
         $this->validate($request, [
@@ -143,8 +191,6 @@ class MovieController extends Controller
             'img_thumbnail' => 'required | mimes:jpeg,png,jpg,gif',
             'img_background' => 'required | mimes:jpeg,png,jpg,gif',
         ]);
-        // dd($request);
-        // echo "$request";
 
         $imageThumbnail = $request->file('img_thumbnail');
         Storage::putFileAs('/public/thumbnail/', $imageThumbnail, $imageThumbnail->getClientOriginalName());
@@ -152,26 +198,24 @@ class MovieController extends Controller
         $imageBackground = $request->file('img_background');
         Storage::putFileAs('/public/background/', $imageBackground, $imageBackground->getClientOriginalName());
 
-        $movie = new Movie();
-        $movie->title = $request->title;
-        $movie->description = $request->description;
-        $movie->director = $request->director;
-        $movie->releaseDate = $request->releaseDate;
-        $movie->img_thumbnail = $imageThumbnail->getClientOriginalName();
-        $movie->img_background = $imageBackground->getClientOriginalName();
-        $movie->save();
-        foreach ($request->genre as $genre) {
-            $movieGenres = new MovieGenre();
-            $movieGenres->genre_id = $genre;
-            $movieGenres->movie_id = $movie->id;
-            $movieGenres->save();
+        $movie = Movie::create([
+            'title' => $request->title,
+            'description' => $request->description,
+            'director' => $request->director,
+            'releaseDate' => $request->releaseDate,
+            'img_thumbnail' => $imageThumbnail->getClientOriginalName(),
+            'img_background' => $imageBackground->getClientOriginalName()
+        ]);
+
+        $genres = $request->genre;
+        $characters = $request->character_name;
+        $actors = $request->actor;
+
+        foreach ($genres as $genre_id) {
+            GenreController::insertGenres($movie->id, $genre_id);
         }
-        for ($i = 0; $i < sizeof($request->actor); $i++) {
-            $characterMovie = new MovieActor();
-            $characterMovie->movie_id = $movie->id;
-            $characterMovie->actor_id = $request->actor[$i];
-            $characterMovie->name = $request->character_name[$i];
-            $characterMovie->save();
+        for ($i = 0; $i < sizeof($actors); $i++) {
+            MovieActorController::insertMovieActor($movie->id, $actors[$i], $characters[$i]);
         }
         return redirect('/movies/addmovie')->with('success', 'Success add movie');
         // return redirect('/movies')->with('success', 'Success add movie');
@@ -246,7 +290,6 @@ class MovieController extends Controller
     public function movieDetail($id)
     {
         $movie = Movie::find($id);
-        $movie->img_background = "storage/banner/" . $movie->img_background;
         $movie->releaseDate = substr($movie->releaseDate, 0, 4);
 
         $genres = MovieGenre::where('movie_id', $id)->get();

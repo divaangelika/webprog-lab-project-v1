@@ -36,33 +36,15 @@ class MovieSeeder extends Seeder
             ],
             [
                 // 'id'=>'3',
-                'title'=>'Avatar: The Way of Water',
+                'title'=>'Beauty and The Beast',
                 'description'=>'Jake Sully lives with his newfound family formed on the extrasolar moon Pandora. Once a familiar threat returns to finish what was previously started, Jake must work with Neytiri and the army of the Navi race to protect their home',
                 'director'=>'James Cameron',
                 'releaseDate'=>'2022-12-18',
-                'img_thumbnail'=>'https://upload.wikimedia.org/wikipedia/en/5/54/Avatar_The_Way_of_Water_poster.jpg',
-                'img_background'=>'https://w0.peakpx.com/wallpaper/965/851/HD-wallpaper-avatar-2-2018-poster-fantasy-movie-avatar-2-navi-blue.jpg'
+                'img_thumbnail'=>'https://m.media-amazon.com/images/I/91p8sSMXpkL.jpg',
+                'img_background'=>'https://files.oyebesmartest.com/uploads/preview/scrape-wp2345240cl63efzp.jpeg'
             ],
             [
                 // 'id'=>'4',
-                'title'=>'Avatar: The Way of Water',
-                'description'=>'Jake Sully lives with his newfound family formed on the extrasolar moon Pandora. Once a familiar threat returns to finish what was previously started, Jake must work with Neytiri and the army of the Navi race to protect their home',
-                'director'=>'James Cameron',
-                'releaseDate'=>'2022-12-18',
-                'img_thumbnail'=>'https://upload.wikimedia.org/wikipedia/en/5/54/Avatar_The_Way_of_Water_poster.jpg',
-                'img_background'=>'https://w0.peakpx.com/wallpaper/965/851/HD-wallpaper-avatar-2-2018-poster-fantasy-movie-avatar-2-navi-blue.jpg'
-            ],
-            [
-                // 'id'=>'5',
-                'title'=>'Avatar: The Way of Water',
-                'description'=>'Jake Sully lives with his newfound family formed on the extrasolar moon Pandora. Once a familiar threat returns to finish what was previously started, Jake must work with Neytiri and the army of the Navi race to protect their home',
-                'director'=>'James Cameron',
-                'releaseDate'=>'2022-12-18',
-                'img_thumbnail'=>'https://upload.wikimedia.org/wikipedia/en/5/54/Avatar_The_Way_of_Water_poster.jpg',
-                'img_background'=>'https://w0.peakpx.com/wallpaper/965/851/HD-wallpaper-avatar-2-2018-poster-fantasy-movie-avatar-2-navi-blue.jpg'
-            ],
-            [
-                // 'id'=>'6',
                 'title'=>'Avatar: The Way of Water',
                 'description'=>'Jake Sully lives with his newfound family formed on the extrasolar moon Pandora. Once a familiar threat returns to finish what was previously started, Jake must work with Neytiri and the army of the Navi race to protect their home',
                 'director'=>'James Cameron',

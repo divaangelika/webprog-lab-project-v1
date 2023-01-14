@@ -31,10 +31,10 @@ Route::middleware([AdminMiddleware::class])->group(function () {
     Route::get('/movies/addmovie', [MovieController::class, 'addMoviePage']);
     Route::post('/movies/addmovie', [MovieController::class, 'addMovie']);
 
-    Route::get('movies/editmovies/{id}', [MovieController::class, 'editMoviePage']);
-    Route::post('movies/editmovies/{id}', [MovieController::class, 'editMovie']);
+    Route::get('/movies/editmovies/{id}', [MovieController::class, 'editMoviePage']);
+    Route::post('/movies/editmovies/{id}', [MovieController::class, 'editMovie']);
 
-    Route::post('movies/deletemovie/{id}', [MovieController::class, 'deleteMovie']);
+    Route::post('/movies/deletemovie/{id}', [MovieController::class, 'deleteMovie']);
 
     Route::get('/actors/addactor', [ActorController::class, 'addactorpage']);
     Route::post('/actors/addactor', [ActorController::class, 'addactor']);

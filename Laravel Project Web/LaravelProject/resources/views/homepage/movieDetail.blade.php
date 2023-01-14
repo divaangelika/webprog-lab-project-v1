@@ -9,13 +9,13 @@
         </div>
     @endif
     <div class="px-5 py-3"
-        style='background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)),url("{{ asset($movie->img_background) }}"); background-position:center; background-repeat:no-repeat; background-size:cover;'>
+        style='background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)), url({{$movie->img_background}}); background-position:center; background-repeat:no-repeat; background-size:cover;'>
         <div class="d-flex ">
             <div class="col-4">
-                <img src="{{ url('/storage/public/background/' . $movie->img_background) }}" alt="" class="w-100 rounded"
+                <img src="{{ $movie->img_thumbnail }}" alt="" class="w-100 rounded"
                     style="z-index:1;">
             </div>
-            <div class="col-6 ">
+            <div class="col-6 text-light">
                 <div class="d-flex justify-content-between align-items-center">
                     <h1>{{ $movie->title }}</h1>
                     @if (Auth::user() && Auth::user()->role == 'admin')
@@ -64,7 +64,7 @@
             @foreach ($actors as $apayaa)
                 <a href="{{ url('actors/detail/' . $apayaa->actor->id) }}" class="text-decoration-none text-reset">
                     <div class="card m-2 border-0" style="width: 18rem;">
-                        <img class="card-img-top" src="{{ asset('/storage/public/actor/' .$apayaa->actor->imgActor) }}"
+                        <img class="card-img-top" src="{{ $apayaa->actor->imgActor }}"
                             alt="Card image cap" style="z-index:1; height:30vh; object-fit: cover;">
                         <div class="card-body bg-danger">
                             <p class="card-text font-weight-bold">{{ $apayaa->actor->name }}</p>
@@ -84,7 +84,7 @@
                 <div class="card m-2 border-0 bg-transparent" style="width: 18rem;">
                     <a href="{{ url('movies/detail/' . $movie->id) }}" class="text-decoration-none">
                         <img class="card-img-top bg-dark h-100 border-top border-0"
-                            src="{{ url('storage/public/thumbnail/' . $movie->img_thumbnail) }}" alt="Card image cap"
+                            src="{{ $movie->img_thumbnail }}" alt="Card image cap"
                             style="z-index:1; object-fit: cover;">
                     </a>
                     <div class="card-body bg-dark rounded-bottom">

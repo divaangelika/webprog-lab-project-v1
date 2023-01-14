@@ -1,5 +1,5 @@
-{{-- @extends('master.master')
-@section('Edit Movie')
+@extends('master.master')
+
 
 @section('content')
 <div class="text-black m-5">
@@ -8,7 +8,7 @@
         {{Session::get('success')}}
     </div>
     @endif
-    <h4 class="fw-bold">Create Movie</h4>
+    <h4 class="fw-bold">Edit Movie</h4>
     <form action="{{url('/movies/addmovie/') }}" class="d-flex flex-column" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="mb-3">
@@ -146,7 +146,7 @@
             @enderror
         </div>
 
-        <button type="submit" class="btn btn-danger mt-3">Create</button>
+        <button type="submit" class="btn btn-danger mt-3">Edit</button>
     </form>
 </div>
 
@@ -161,4 +161,4 @@
 @endsection
 
 
- --}}
+

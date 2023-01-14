@@ -9,7 +9,7 @@
     </div>
     @endif
     <h4 class="fw-bold">Create</h4>
-    <form action="{{url('movies/addmovie')}}" class="d-flex flex-column" method="POST" enctype="multipart/form-data">
+    <form action="{{url('/movies/addmovie')}}" class="d-flex flex-column" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="mb-3">
             <label for="title" class="form-label">Title</label>
@@ -106,7 +106,7 @@
                 </div>
                 <div class="col">
                     <label for="charactername" class="form-label">Character Name</label>
-                    <input type="text" class="form-control text-black" id="charactername" name="character_name[]">
+                    <input type="text" class="form-control text-black" id="character_name[]" name="character_name[]">
                     @error('character_name')
                     {{ $message }}
                     @enderror
@@ -126,21 +126,21 @@
         </div>
         <div class="mb-3">
             <label for="date" class="form-label">Release Date</label>
-            <input type="date" class="form-control text-black" id="date" name="release_date" @if($movie) value="{{$movie->release_date}}" @endif></input>
+            <input type="date" class="form-control text-black" id="releaseDate" name="releaseDate" @if($movie) value="{{$movie->release_date}}" @endif></input>
             @error('release_date')
             {{ $message }}
             @enderror
         </div>
         <div class="mb-3">
             <label for="image" class="form-label">Image Url</label>
-            <input class="form-control text-black" type="file" id="image" placeholder="No file choosen" name="img_thumbnail">
+            <input class="form-control text-black" type="file" id="img_thumbnail" placeholder="No file choosen" name="img_thumbnail">
             @error('img_thumbnail')
             {{ $message }}
             @enderror
         </div>
         <div class="mb-3">
             <label for="background" class="form-label">Background Url</label>
-            <input class="form-control text-black" type="file" id="background" placeholder="No file choosen" name="img_banner">
+            <input class="form-control text-black" type="file" id="img_background" placeholder="No file choosen" name="img_background">
             @error('img_banner')
             {{ $message }}
             @enderror

@@ -154,26 +154,7 @@
                 <input type="search" class="form-control w-75" id="" name="title" placeholder="Search Movie">
             </form>
         </div>
-        {{-- <div class="mt-4">
-            <form action="{{ url('/search') }}">
-                @foreach ($genres as $genre)
-                    <button type="submit" class="btn btn-dark m-2" style="border-radius: 25px; width:12%;"
-                        value="{{ $genre->id }}" name="genre">{{ $genre->name }}</button>
-                @endforeach
-            </form>
-        </div> --}}
         <div class="d-flex align-items-center justify-content-between mt-4">
-            {{-- <div class="d-flex align-items-center">
-                <p class="h5">Sort By:</p>
-                <form action="{{ url('/search') }}">
-                    <button type="submit" name="sort" value="latest" class="btn btn-dark ml-3"
-                        style="border-radius: 25px;">Latest</button>
-                    <button type="submit" name="sort" value="ascending" class="btn btn-dark ml-3"
-                        style="border-radius: 25px;">A-Z</button>
-                    <button type="submit" name="sort" value="descending" class="btn btn-dark ml-3"
-                        style="border-radius: 25px;">Z-A</button>
-                </form>
-            </div> --}}
             @if (Auth::check() && Auth()->user()->role == 'admin')
                 <a href="{{ url('movies/addmovie') }}"><button type="button" class="btn btn-danger">Add
                         Movie</button></a>
@@ -184,7 +165,7 @@
                 <div class="card m-2 border-0 bg-transparent" style="width: 18rem;">
                     <a href="{{ url('movies/detail/' . $movie->id) }}" class="text-decoration-none">
                         <img class="card-img-top bg-dark h-100 border-top border-0"
-                            src="{{ url('storage/poster/'. $movie->img_thumbnail) }}" alt="Card image cap"
+                            src="{{ $movie->img_thumbnail }}" alt="Card image cap"
                             style="z-index:1; object-fit: cover;">
                     </a>
                     <div class="card-body bg-dark rounded-bottom">
