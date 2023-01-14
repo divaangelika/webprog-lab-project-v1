@@ -61,14 +61,14 @@
     <div class="px-5 py-3">
         <h3>Cast</h3>
         <div class="d-flex flex-wrap">
-            @foreach ($actors as $actor)
-                <a href="{{ url('actors/detail/' . $actor->actor->id) }}" class="text-decoration-none text-reset">
+            @foreach ($actors as $apayaa)
+                <a href="{{ url('actors/detail/' . $apayaa->actor->id) }}" class="text-decoration-none text-reset">
                     <div class="card m-2 border-0" style="width: 18rem;">
-                        <img class="card-img-top" src="{{ asset('/storage/public/actor/' .$actor->actor->imgActor) }}"
+                        <img class="card-img-top" src="{{ asset('/storage/public/actor/' .$apayaa->actor->imgActor) }}"
                             alt="Card image cap" style="z-index:1; height:30vh; object-fit: cover;">
                         <div class="card-body bg-danger">
-                            <p class="card-text font-weight-bold">{{ $actor->actor->name }}</p>
-                            <p class="card-text">{{ $actor->name }}</p>
+                            <p class="card-text font-weight-bold">{{ $apayaa->actor->name }}</p>
+                            <p class="card-text">{{ $apayaa->name }}</p>
                         </div>
                     </div>
                 </a>
