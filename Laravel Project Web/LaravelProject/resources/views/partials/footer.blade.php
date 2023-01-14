@@ -3,7 +3,7 @@
 
 <footer>
     <div class="text-center">
-        <h1 class="display-3">ShowFlix</h1>
+        <h1 class="display-3">MovieList</h1>
     </div>
     <div class="text-center">
     <button class="btn btn-danger" type="button">

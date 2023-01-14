@@ -49,7 +49,7 @@
 
       <footer>
         <div class="text-center">
-            <h1 class="display-3">ShowFlix</h1>
+            <h1 class="display-3">MovieList</h1>
         </div>
         <div class="text-center">
         <button class="btn btn-danger" type="button">
@@ -73,7 +73,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
         </div>
         <div class="text-center">
-            &copy; {{ date('Y') }} ShowFlix All Right Reserved
+            &copy; {{ date('Y') }} MovieList All Right Reserved
         </div>
     </footer>
 

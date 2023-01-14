@@ -130,54 +130,6 @@ class MovieController extends Controller
         return redirect("/movies/detail/$id")->with('success', 'Success edit movie');
     }
 
-    // public function addMovie(Request $request)
-    // {
-    //     $this->validate($request, [
-    //         'title' => 'required | min:2 | max:50',
-    //         'description' => 'required | min:8',
-    //         'genre' => 'required|array',
-    //         'actor' => 'required|array',
-    //         'character_name' => 'required|array',
-    //         'director' => 'required | min:3',
-    //         'releaseDate' => 'required',
-    //         'img_thumbnail' => 'required | mimes:jpeg,png,jpg,gif',
-    //         'img_background' => 'required | mimes:jpeg,png,jpg,gif',
-    //     ]);
-    //     // dd($request);
-    //     // echo "$request";
-
-    //     $imageThumbnail = $request->file('img_thumbnail');
-    //     Storage::putFileAs('/public/thumbnail/', $imageThumbnail, $imageThumbnail->getClientOriginalName());
-
-    //     $imageBackground = $request->file('img_background');
-    //     Storage::putFileAs('/public/background/', $imageBackground, $imageBackground->getClientOriginalName());
-
-    //     $movie = new Movie();
-    //     $movie->title = $request->title;
-    //     $movie->description = $request->description;
-    //     $movie->director = $request->director;
-    //     $movie->releaseDate = $request->releaseDate;
-    //     $movie->img_thumbnail = $imageThumbnail->getClientOriginalName();
-    //     $movie->img_background = $imageBackground->getClientOriginalName();
-    //     $movie->save();
-    //     foreach ($request->genre as $genre) {
-    //         $movieGenres = new MovieGenre();
-    //         $movieGenres->genre_id = $genre;
-    //         $movieGenres->movie_id = $movie->id;
-    //         $movieGenres->save();
-    //     }
-    //     for ($i = 0; $i < sizeof($request->actor); $i++) {
-    //         $characterMovie = new MovieActor();
-    //         $characterMovie->movie_id = $movie->id;
-    //         $characterMovie->actor_id = $request->actor[$i];
-    //         $characterMovie->name = $request->character_name[$i];
-    //         $characterMovie->save();
-    //     }
-    //     return redirect('/movies/addmovie')->with('success', 'Success add movie');
-    //     // return redirect('/movies')->with('success', 'Success add movie');
-
-    // }
-
     public function addMovie(Request $request)
     {
         $this->validate($request, [
