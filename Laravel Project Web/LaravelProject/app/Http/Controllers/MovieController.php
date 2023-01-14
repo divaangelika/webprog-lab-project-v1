@@ -104,10 +104,10 @@ class MovieController extends Controller
         }
         if (sizeof($movieGenres) < sizeof($request->genre)) {
             for ($i = 0; $i < sizeof($request->genre) - sizeof($movieGenres); $i++) {
-                $genreMovie = new MovieGenre();
-                $genreMovie->genre_id = $request->genre[sizeof($movieGenres) + $i];
-                $genreMovie->movie_id = $id;
-                $genreMovie->save();
+                $movieGenre = new MovieGenre();
+                $movieGenre->genre_id = $request->genre[sizeof($movieGenres) + $i];
+                $movieGenre->movie_id = $id;
+                $movieGenre->save();
             }
         }
 
@@ -173,7 +173,7 @@ class MovieController extends Controller
             $characterMovie->name = $request->character_name[$i];
             $characterMovie->save();
         }
-        return redirect('/movies/addMovie')->with('success', 'Success add movie');
+        return redirect('/movies/addmovie')->with('success', 'Success add movie');
         // return redirect('/movies')->with('success', 'Success add movie');
 
     }

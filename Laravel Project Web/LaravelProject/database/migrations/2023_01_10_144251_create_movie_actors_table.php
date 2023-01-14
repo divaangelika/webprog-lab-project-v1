@@ -20,6 +20,7 @@ return new class extends Migration
             // $table->primary(['movie_id', 'actor_id']);
             $table->foreignId('movie_id')->reference('id')->on('movies')->onDelete('cascade');
             $table->foreignId('actor_id')->references('id')->on('actors')->onDelete('cascade');
+            $table->string('name');
             $table->timestamps();
         });
     }
